@@ -14,12 +14,12 @@
       min-height: 100vh;
     }
     .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
-    
+
     /* Header */
     .header { text-align: center; margin-bottom: 32px; }
     .header .subtitle { font-size: 12px; color: #94a3b8; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
-    .header h1 { font-size: 32px; font-weight: 800; background: linear-gradient(90deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
-    .header .meta { font-size: 14px; color: #64748b; }
+    .header h1 { font-size: 36px; font-weight: 800; background: linear-gradient(90deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
+    .header .meta { font-size: 16px; color: #64748b; }
     .header .status { display: inline-block; margin-top: 12px; padding: 4px 16px; background: #dc2626; color: #fff; font-size: 12px; font-weight: 700; border-radius: 4px; letter-spacing: 1px; }
 
     /* Overview Cards */
@@ -34,126 +34,59 @@
     }
     .card:hover { transform: translateY(-2px); border-color: #475569; }
     .card .label { font-size: 11px; color: #94a3b8; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
-    .card .value { font-size: 28px; font-weight: 800; color: #f8fafc; }
+    .card .value { font-size: 32px; font-weight: 800; color: #f8fafc; }
     .card .sub { font-size: 13px; color: #64748b; margin-top: 4px; }
     .card .highlight { color: #fbbf24; }
 
-    /* Main Layout: King + Leaderboard */
-    .main-grid { display: grid; grid-template-columns: 380px 1fr; gap: 24px; margin-bottom: 32px; }
-    
-    /* King Card */
-    .king-card {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      border: 2px solid #fbbf24;
-      border-radius: 16px;
-      padding: 32px 24px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .king-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #fbbf24, #f59e0b);
-    }
-    .king-card .king-label { font-size: 12px; color: #fbbf24; letter-spacing: 2px; font-weight: 700; margin-bottom: 16px; }
-    .king-card .king-avatar {
-      width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #fbbf24, #f59e0b);
-      margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;
-      font-size: 32px; font-weight: 800; color: #0f172a;
-    }
-    .king-card .king-name { font-size: 24px; font-weight: 800; color: #f8fafc; margin-bottom: 16px; }
-    .king-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .king-stat { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 12px; }
-    .king-stat .num { font-size: 20px; font-weight: 700; color: #fbbf24; }
-    .king-stat .txt { font-size: 12px; color: #94a3b8; margin-top: 2px; }
-    .king-badge {
-      display: inline-block; margin-top: 16px; padding: 6px 20px;
-      background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #0f172a;
-      font-size: 14px; font-weight: 800; border-radius: 20px;
-    }
-
-    /* Leaderboard */
-    .leaderboard {
+    /* Section */
+    .section {
       background: linear-gradient(135deg, #1e293b, #0f172a);
       border: 1px solid #334155;
       border-radius: 16px;
       padding: 24px;
+      margin-bottom: 24px;
     }
-    .leaderboard-header {
+    .section-header {
       display: flex; justify-content: space-between; align-items: center;
       margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #334155;
     }
-    .leaderboard-header h2 { font-size: 18px; font-weight: 700; }
-    .leaderboard-header .count { font-size: 12px; color: #94a3b8; }
-    .leaderboard-item {
-      display: flex; align-items: center; gap: 12px;
-      padding: 12px 16px; border-radius: 8px;
-      transition: background 0.2s; cursor: pointer;
+    .section-header h2 { font-size: 20px; font-weight: 700; }
+    .section-header .count { font-size: 12px; color: #94a3b8; }
+
+    /* Rank Table */
+    .rank-table { width: 100%; border-collapse: collapse; }
+    .rank-table th {
+      text-align: left; font-size: 12px; color: #94a3b8; font-weight: 600;
+      padding: 10px 12px; border-bottom: 1px solid #334155; text-transform: uppercase; letter-spacing: 1px;
     }
-    .leaderboard-item:hover { background: rgba(255,255,255,0.03); }
-    .leaderboard-item .rank {
-      width: 32px; height: 32px; border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 14px; font-weight: 700; flex-shrink: 0;
+    .rank-table td {
+      padding: 12px; border-bottom: 1px solid #1e293b; font-size: 14px;
+    }
+    .rank-table tr:hover td { background: rgba(255,255,255,0.03); }
+    .rank-table .rank-cell {
+      width: 40px; text-align: center;
+    }
+    .rank-num {
+      width: 28px; height: 28px; border-radius: 6px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700;
     }
     .rank-1 { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #0f172a; }
     .rank-2 { background: linear-gradient(135deg, #cbd5e1, #94a3b8); color: #0f172a; }
     .rank-3 { background: linear-gradient(135deg, #f97316, #ea580c); color: #fff; }
     .rank-other { background: #334155; color: #94a3b8; }
-    .leaderboard-item .info { flex: 1; min-width: 0; }
-    .leaderboard-item .name { font-size: 15px; font-weight: 600; color: #f8fafc; }
-    .leaderboard-item .detail { font-size: 12px; color: #94a3b8; margin-top: 2px; }
-    .leaderboard-item .power { font-size: 14px; font-weight: 700; color: #fbbf24; }
-    .leaderboard-item .revenue { font-size: 14px; font-weight: 700; color: #f8fafc; text-align: right; min-width: 80px; }
+    .name-cell { font-weight: 600; color: #f8fafc; }
+    .sub-cell { font-size: 12px; color: #64748b; margin-top: 2px; }
+    .orders-cell { font-size: 16px; font-weight: 700; color: #fbbf24; text-align: center; }
+    .people-cell { font-size: 12px; color: #94a3b8; max-width: 300px; word-break: break-all; }
 
-    /* Matches Section */
-    .matches-section {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      border: 1px solid #334155;
-      border-radius: 16px;
-      padding: 24px;
-    }
-    .matches-section h2 { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
-    .matches-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .match-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid #334155;
-      border-radius: 12px;
-      padding: 20px;
-      transition: border-color 0.2s;
-    }
-    .match-card:hover { border-color: #475569; }
-    .match-header {
-      display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #334155;
-    }
-    .match-id { font-size: 12px; color: #94a3b8; font-weight: 600; }
-    .match-result {
-      font-size: 12px; padding: 4px 12px; border-radius: 4px; font-weight: 700;
-    }
-    .result-defend { background: #166534; color: #86efac; }
-    .result-attack { background: #7c2d12; color: #fca5a5; }
-    .match-body { display: flex; align-items: center; gap: 16px; }
-    .match-side { flex: 1; text-align: center; }
-    .match-side .side-label { font-size: 11px; color: #64748b; margin-bottom: 4px; }
-    .match-side .side-name { font-size: 16px; font-weight: 700; color: #f8fafc; margin-bottom: 4px; }
-    .match-side .side-manager { font-size: 11px; color: #64748b; margin-bottom: 8px; }
-    .match-side .side-revenue { font-size: 18px; font-weight: 800; color: #fbbf24; }
-    .match-side .side-orders { font-size: 12px; color: #94a3b8; margin-top: 2px; }
-    .match-vs {
-      display: flex; flex-direction: column; align-items: center; gap: 4px;
-      color: #475569; font-weight: 700; font-size: 14px;
-    }
-    .match-vs .vs-lead { font-size: 11px; color: #22c55e; }
-    .match-vs .vs-lead.attack-win { color: #ef4444; }
+    /* Two-column layout */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 
     /* Responsive */
     @media (max-width: 900px) {
-      .main-grid { grid-template-columns: 1fr; }
       .overview { grid-template-columns: repeat(2, 1fr); }
-      .matches-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
     }
     @media (max-width: 500px) {
       .overview { grid-template-columns: 1fr; }
@@ -165,82 +98,82 @@
     <!-- Header -->
     <div class="header">
       <div class="subtitle">GROUP PK ARENA</div>
-      <h1 id="pageTitle">菁英班榜上有名</h1>
+      <h1>菁英班榜上有名</h1>
       <div class="meta" id="pageMeta">5月11日-8月1日，菁英班火力全开ing</div>
-      <div class="status" id="pageStatus">LIVE</div>
+      <div class="status">LIVE</div>
     </div>
 
     <!-- Overview Cards -->
     <div class="overview">
       <div class="card">
-        <div class="label">擂台总数</div>
-        <div class="value" id="totalMatches">128</div>
-        <div class="sub"><span id="matchesWithResult">120</span>场已有5月战绩</div>
+        <div class="label">总出单人数</div>
+        <div class="value" id="totalPeople">0</div>
+        <div class="sub">参与人员</div>
       </div>
       <div class="card">
-        <div class="label">PK净收</div>
-        <div class="value highlight" id="totalRevenue">¥20,315,831</div>
-        <div class="sub">总订单<span id="totalOrders">9,094</span>单</div>
+        <div class="label">最贵SKU总个数</div>
+        <div class="value highlight" id="totalOrders">0</div>
+        <div class="sub">累计出单</div>
       </div>
       <div class="card">
-        <div class="label">守擂成功</div>
-        <div class="value" id="defendWins">86</div>
-        <div class="sub">守擂率<span id="defendRate">67.2</span>%</div>
+        <div class="label">参与分校</div>
+        <div class="value" id="branchCount">0</div>
+        <div class="sub">覆盖区域</div>
       </div>
       <div class="card">
-        <div class="label">攻擂翻盘</div>
-        <div class="value" id="attackWins">42</div>
-        <div class="sub">攻擂率<span id="attackRate">32.8</span>%</div>
+        <div class="label">参与军团</div>
+        <div class="value" id="groupCount">0</div>
+        <div class="sub">作战单元</div>
       </div>
     </div>
 
-    <!-- Main Grid: King + Leaderboard -->
-    <div class="main-grid">
-      <!-- King -->
-      <div class="king-card" id="kingCard">
-        <div class="king-label">CURRENT KING</div>
-        <div class="king-avatar" id="kingAvatar">王</div>
-        <div class="king-name" id="kingName">王振彬</div>
-        <div class="king-stats">
-          <div class="king-stat">
-            <div class="num" id="kingOrders">71</div>
-            <div class="txt">单输出</div>
-          </div>
-          <div class="king-stat">
-            <div class="num" id="kingRevenue">¥142,000</div>
-            <div class="txt">净收</div>
-          </div>
-          <div class="king-stat">
-            <div class="num" id="kingRefund">5.1%</div>
-            <div class="txt">退款率</div>
-          </div>
-          <div class="king-stat">
-            <div class="num" id="kingPower">14.2</div>
-            <div class="txt">战力</div>
-          </div>
+    <!-- Two Column: Branch + Group -->
+    <div class="two-col">
+      <!-- Branch Ranking -->
+      <div class="section">
+        <div class="section-header">
+          <h2>🏫 分校排行榜</h2>
+          <div class="count">按最贵SKU个数排序</div>
         </div>
-        <div class="king-badge">KING</div>
+        <table class="rank-table">
+          <thead>
+            <tr><th>排名</th><th>分校</th><th style="text-align:center">SKU个数</th></tr>
+          </thead>
+          <tbody id="branchTable"></tbody>
+        </table>
       </div>
 
-      <!-- Leaderboard -->
-      <div class="leaderboard">
-        <div class="leaderboard-header">
-          <h2>个人战力排行榜</h2>
-          <div class="count" id="leaderboardCount">Top 12</div>
+      <!-- Group Ranking -->
+      <div class="section">
+        <div class="section-header">
+          <h2>⚔️ 军团排行榜</h2>
+          <div class="count">按最贵SKU个数排序</div>
         </div>
-        <div id="leaderboardList"></div>
+        <table class="rank-table">
+          <thead>
+            <tr><th>排名</th><th>军团</th><th style="text-align:center">SKU个数</th></tr>
+          </thead>
+          <tbody id="groupTable"></tbody>
+        </table>
       </div>
     </div>
 
-    <!-- Matches -->
-    <div class="matches-section">
-      <h2>PK擂台全量对战</h2>
-      <div class="matches-grid" id="matchesGrid"></div>
+    <!-- People Ranking -->
+    <div class="section">
+      <div class="section-header">
+        <h2>👑 个人排行榜</h2>
+        <div class="count">按最贵SKU个数排序</div>
+      </div>
+      <table class="rank-table">
+        <thead>
+          <tr><th>排名</th><th>lpc伙伴</th><th>所属军团</th><th style="text-align:center">SKU个数</th></tr>
+        </thead>
+        <tbody id="peopleTable"></tbody>
+      </table>
     </div>
   </div>
 
   <script>
-    // Load data from data.json and render
     async function loadData() {
       try {
         const response = await fetch('data.json');
@@ -249,98 +182,80 @@
         render(data);
       } catch (e) {
         console.error('Error loading data:', e);
-        document.querySelector('.container').insertAdjacentHTML('afterbegin', 
+        document.querySelector('.container').insertAdjacentHTML('afterbegin',
           '<div style="text-align:center;padding:20px;color:#ef4444;">⚠️ 加载数据失败，请检查 data.json 文件是否存在</div>'
         );
       }
     }
 
-    function formatMoney(num) {
-      return '¥' + num.toLocaleString('zh-CN');
-    }
-
     function render(data) {
       // Header
-      document.getElementById('pageTitle').textContent = '菁英班榜上有名';
-      document.getElementById('pageMeta').textContent = 
-        data.dateRange + ' | ' + data.totalMatches + '场擂台 | ' + data.matchesWithResult + '场已有战绩';
+      document.getElementById('pageMeta').textContent = data.subtitle || data.dateRange;
 
       // Overview
-      document.getElementById('totalMatches').textContent = data.totalMatches;
-      document.getElementById('matchesWithResult').textContent = data.matchesWithResult;
-      document.getElementById('totalRevenue').textContent = formatMoney(data.totalRevenue);
-      document.getElementById('totalOrders').textContent = data.totalOrders.toLocaleString('zh-CN');
-      document.getElementById('defendWins').textContent = data.defendWins;
-      document.getElementById('defendRate').textContent = data.defendRate;
-      document.getElementById('attackWins').textContent = data.attackWins;
-      document.getElementById('attackRate').textContent = data.attackRate;
+      const activeBranches = data.branches.filter(b => b.orders > 0);
+      const activeGroups = data.groups.filter(g => g.orders > 0);
+      document.getElementById('totalPeople').textContent = data.totalPeople;
+      document.getElementById('totalOrders').textContent = data.totalOrders;
+      document.getElementById('branchCount').textContent = activeBranches.length;
+      document.getElementById('groupCount').textContent = activeGroups.length;
 
-      // King
-      const king = data.currentKing;
-      document.getElementById('kingAvatar').textContent = king.name.charAt(0);
-      document.getElementById('kingName').textContent = king.name;
-      document.getElementById('kingOrders').textContent = king.orders;
-      document.getElementById('kingRevenue').textContent = formatMoney(king.revenue);
-      document.getElementById('kingRefund').textContent = king.refundRate + '%';
-      document.getElementById('kingPower').textContent = king.power;
-
-      // Leaderboard
-      const lbList = document.getElementById('leaderboardList');
-      lbList.innerHTML = '';
-      data.leaderboard.forEach(p => {
-        const rankClass = p.rank === 1 ? 'rank-1' : p.rank === 2 ? 'rank-2' : p.rank === 3 ? 'rank-3' : 'rank-other';
-        const item = document.createElement('div');
-        item.className = 'leaderboard-item';
-        item.innerHTML = `
-          <div class="rank ${rankClass}">${p.rank.toString().padStart(2, '0')}</div>
-          <div class="info">
-            <div class="name">${p.name}</div>
-            <div class="detail">${p.orders}单 · 战力${p.power}</div>
-          </div>
-          <div class="power">${p.power}</div>
-          <div class="revenue">${formatMoney(p.revenue)}</div>
+      // Branch Table (sorted by orders desc)
+      const sortedBranches = [...data.branches].sort((a, b) => b.orders - a.orders);
+      const branchTbody = document.getElementById('branchTable');
+      sortedBranches.forEach((b, i) => {
+        const rank = i + 1;
+        const rankClass = rank === 1 ? 'rank-1' : rank === 2 ? 'rank-2' : rank === 3 ? 'rank-3' : 'rank-other';
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td class="rank-cell"><span class="rank-num ${rankClass}">${rank}</span></td>
+          <td>
+            <div class="name-cell">${b.name}</div>
+            <div class="sub-cell">${b.people.join('、')}</div>
+          </td>
+          <td class="orders-cell">${b.orders}</td>
         `;
-        lbList.appendChild(item);
+        branchTbody.appendChild(row);
       });
-      document.getElementById('leaderboardCount').textContent = 'Top ' + data.leaderboard.length;
 
-      // Matches
-      const mg = document.getElementById('matchesGrid');
-      mg.innerHTML = '';
-      data.matches.forEach(m => {
-        const isDefendWin = m.result === '守擂成功';
-        const card = document.createElement('div');
-        card.className = 'match-card';
-        card.innerHTML = `
-          <div class="match-header">
-            <div class="match-id">${m.id} · ${m.groupName}</div>
-            <div class="match-result ${isDefendWin ? 'result-defend' : 'result-attack'}">${m.result}</div>
-          </div>
-          <div class="match-body">
-            <div class="match-side">
-              <div class="side-label">守擂方 · ${m.defender.manager}</div>
-              <div class="side-name">${m.defender.name}</div>
-              <div class="side-revenue">${formatMoney(m.defender.revenue)}</div>
-              <div class="side-orders">${m.defender.orders}单</div>
-            </div>
-            <div class="match-vs">
-              <div>VS</div>
-              <div class="vs-lead ${!isDefendWin ? 'attack-win' : ''}">领先${formatMoney(m.lead)}</div>
-            </div>
-            <div class="match-side">
-              <div class="side-label">攻擂方 · ${m.attacker.manager}</div>
-              <div class="side-name">${m.attacker.name}</div>
-              <div class="side-revenue">${formatMoney(m.attacker.revenue)}</div>
-              <div class="side-orders">${m.attacker.orders}单</div>
-            </div>
-          </div>
-          <div style="margin-top:12px;font-size:11px;color:#64748b;text-align:center;">${m.module}</div>
+      // Group Table (sorted by orders desc)
+      const sortedGroups = [...data.groups].sort((a, b) => b.orders - a.orders);
+      const groupTbody = document.getElementById('groupTable');
+      sortedGroups.forEach((g, i) => {
+        const rank = i + 1;
+        const rankClass = rank === 1 ? 'rank-1' : rank === 2 ? 'rank-2' : rank === 3 ? 'rank-3' : 'rank-other';
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td class="rank-cell"><span class="rank-num ${rankClass}">${rank}</span></td>
+          <td>
+            <div class="name-cell">${g.name}</div>
+            <div class="sub-cell">${g.branch}</div>
+          </td>
+          <td class="orders-cell">${g.orders}</td>
         `;
-        mg.appendChild(card);
+        groupTbody.appendChild(row);
+      });
+
+      // People Table (sorted by orders desc)
+      const sortedPeople = [...data.people].sort((a, b) => b.orders - a.orders);
+      const peopleTbody = document.getElementById('peopleTable');
+      sortedPeople.forEach((p, i) => {
+        const rank = i + 1;
+        const rankClass = rank === 1 ? 'rank-1' : rank === 2 ? 'rank-2' : rank === 3 ? 'rank-3' : 'rank-other';
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td class="rank-cell"><span class="rank-num ${rankClass}">${rank}</span></td>
+          <td class="name-cell">${p.name}</td>
+          <td>
+            <div class="name-cell">${p.group}</div>
+            <div class="sub-cell">${p.branch}</div>
+          </td>
+          <td class="orders-cell">${p.orders}</td>
+        `;
+        peopleTbody.appendChild(row);
       });
     }
 
-    // Init
     loadData();
   </script>
 </body>
