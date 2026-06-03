@@ -1,0 +1,72 @@
+{
+  "period": "2026-06",
+  "dateRange": "2026-06-01 至 2026-06-30",
+  "totalMatches": 128,
+  "matchesWithResult": 120,
+  "totalRevenue": 20315831,
+  "totalOrders": 9094,
+  "defendWins": 86,
+  "attackWins": 42,
+  "defendRate": 67.2,
+  "attackRate": 32.8,
+  "currentKing": {
+    "name": "王振彬",
+    "orders": 71,
+    "revenue": 142000,
+    "refundRate": 5.1,
+    "power": 14.2,
+    "avatar": ""
+  },
+  "leaderboard": [
+    { "rank": 1, "name": "王振彬", "orders": 71, "power": 14.2, "revenue": 142000 },
+    { "rank": 2, "name": "马俊锋", "orders": 68, "power": 13.4, "revenue": 134250 },
+    { "rank": 3, "name": "祁清阳", "orders": 61, "power": 12.2, "revenue": 121550 },
+    { "rank": 4, "name": "祁聪丽", "orders": 51, "power": 11.0, "revenue": 109550 },
+    { "rank": 5, "name": "王懂华", "orders": 48, "power": 8.9, "revenue": 89397 },
+    { "rank": 6, "name": "孟志文", "orders": 47, "power": 8.6, "revenue": 85600 },
+    { "rank": 7, "name": "程飞", "orders": 46, "power": 8.3, "revenue": 83500 },
+    { "rank": 8, "name": "耿可可", "orders": 38, "power": 8.3, "revenue": 82750 },
+    { "rank": 9, "name": "董贺楠", "orders": 40, "power": 8.2, "revenue": 82000 },
+    { "rank": 10, "name": "游江涛", "orders": 51, "power": 8.1, "revenue": 81178 },
+    { "rank": 11, "name": "司彦昌", "orders": 36, "power": 7.6, "revenue": 75550 },
+    { "rank": 12, "name": "齐建国", "orders": 36, "power": 7.5, "revenue": 75250 }
+  ],
+  "matches": [
+    {
+      "id": "A074",
+      "groupName": "原28组",
+      "result": "守擂成功",
+      "defender": { "name": "王振彬", "manager": "N2 李峥榕", "revenue": 142000, "orders": 71 },
+      "attacker": { "name": "祁聪丽", "manager": "N2 李峥榕", "revenue": 109550, "orders": 51 },
+      "module": "学习顾问/菁英/本地化",
+      "lead": 32450
+    },
+    {
+      "id": "A097",
+      "groupName": "原51组",
+      "result": "守擂成功",
+      "defender": { "name": "马俊锋", "manager": "N2 王雅10", "revenue": 134250, "orders": 68 },
+      "attacker": { "name": "孟志文", "manager": "N2 王雅10", "revenue": 85600, "orders": 47 },
+      "module": "学习顾问/菁英/本地化",
+      "lead": 48650
+    },
+    {
+      "id": "A014",
+      "groupName": "原14组",
+      "result": "守擂成功",
+      "defender": { "name": "祁清阳", "manager": "N2 吴辉01", "revenue": 121550, "orders": 61 },
+      "attacker": { "name": "李浩冉03", "manager": "N2 吴辉01", "revenue": 47950, "orders": 22 },
+      "module": "学习规划部",
+      "lead": 73600
+    },
+    {
+      "id": "A071",
+      "groupName": "原25组",
+      "result": "攻擂成功",
+      "defender": { "name": "李乐莹", "manager": "N2 李书凯", "revenue": 67850, "orders": 34 },
+      "attacker": { "name": "王懂华", "manager": "N2 李书凯", "revenue": 89397, "orders": 48 },
+      "module": "学习顾问/菁英/本地化",
+      "lead": 21547
+    }
+  ]
+}
