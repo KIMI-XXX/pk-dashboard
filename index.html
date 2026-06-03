@@ -8,88 +8,105 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: #0f172a;
+      background: linear-gradient(135deg, #0a0a0a 0%, #111827 50%, #0a0a0a 100%);
       color: #e2e8f0;
-      line-height: 1.6;
+      line-height: 1.4;
       min-height: 100vh;
     }
-    .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
     /* Header */
-    .header { text-align: center; margin-bottom: 32px; }
-    .header .subtitle { font-size: 12px; color: #94a3b8; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
-    .header h1 { font-size: 36px; font-weight: 800; background: linear-gradient(90deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
-    .header .meta { font-size: 16px; color: #64748b; }
-    .header .status { display: inline-block; margin-top: 12px; padding: 4px 16px; background: #dc2626; color: #fff; font-size: 12px; font-weight: 700; border-radius: 4px; letter-spacing: 1px; }
+    .header { text-align: center; margin-bottom: 20px; padding: 16px 0; }
+    .header .subtitle { font-size: 11px; color: #f59e0b; letter-spacing: 3px; font-weight: 700; margin-bottom: 6px; }
+    .header h1 { font-size: 42px; font-weight: 900; color: #fff; text-shadow: 0 0 30px rgba(251, 191, 36, 0.3); margin-bottom: 6px; }
+    .header .meta { font-size: 14px; color: #9ca3af; }
+    .header .status { display: inline-block; margin-top: 8px; padding: 3px 12px; background: linear-gradient(90deg, #dc2626, #ef4444); color: #fff; font-size: 11px; font-weight: 700; border-radius: 4px; letter-spacing: 1px; }
 
-    /* Overview Cards */
-    .overview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+    /* Overview Cards - 2x2 grid */
+    .overview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
     .card {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      border: 1px solid #334155;
-      border-radius: 12px;
-      padding: 20px;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(251, 191, 36, 0.15);
+      border-radius: 10px;
+      padding: 16px;
       text-align: center;
-      transition: transform 0.2s;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
     }
-    .card:hover { transform: translateY(-2px); border-color: #475569; }
-    .card .label { font-size: 11px; color: #94a3b8; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
-    .card .value { font-size: 32px; font-weight: 800; color: #f8fafc; }
-    .card .sub { font-size: 13px; color: #64748b; margin-top: 4px; }
+    .card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, #fbbf24, transparent);
+      opacity: 0.5;
+    }
+    .card:hover { transform: translateY(-3px); border-color: rgba(251, 191, 36, 0.4); box-shadow: 0 8px 32px rgba(251, 191, 36, 0.1); }
+    .card .label { font-size: 10px; color: #94a3b8; letter-spacing: 1px; margin-bottom: 4px; }
+    .card .value { font-size: 36px; font-weight: 900; color: #fff; text-shadow: 0 0 20px rgba(251, 191, 36, 0.2); }
+    .card .sub { font-size: 11px; color: #64748b; margin-top: 2px; }
     .card .highlight { color: #fbbf24; }
 
-    /* Section */
-    .section {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      border: 1px solid #334155;
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 24px;
+    /* Tab Navigation */
+    .tabs { display: flex; gap: 0; margin-bottom: 16px; border-radius: 8px; overflow: hidden; background: rgba(30, 41, 59, 0.5); border: 1px solid #334155; }
+    .tab {
+      flex: 1; padding: 12px; text-align: center; font-size: 13px; font-weight: 600; color: #94a3b8;
+      cursor: pointer; transition: all 0.3s; border: none; background: none;
+      border-right: 1px solid #334155;
     }
-    .section-header {
-      display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #334155;
-    }
-    .section-header h2 { font-size: 20px; font-weight: 700; }
-    .section-header .count { font-size: 12px; color: #94a3b8; }
+    .tab:last-child { border-right: none; }
+    .tab:hover { color: #e2e8f0; background: rgba(255,255,255,0.03); }
+    .tab.active { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #0f172a; font-weight: 700; }
 
-    /* Rank Table */
-    .rank-table { width: 100%; border-collapse: collapse; }
-    .rank-table th {
-      text-align: left; font-size: 12px; color: #94a3b8; font-weight: 600;
-      padding: 10px 12px; border-bottom: 1px solid #334155; text-transform: uppercase; letter-spacing: 1px;
-    }
-    .rank-table td {
-      padding: 12px; border-bottom: 1px solid #1e293b; font-size: 14px;
-    }
-    .rank-table tr:hover td { background: rgba(255,255,255,0.03); }
-    .rank-table .rank-cell {
-      width: 40px; text-align: center;
-    }
-    .rank-num {
-      width: 28px; height: 28px; border-radius: 6px;
-      display: inline-flex; align-items: center; justify-content: center;
-      font-size: 13px; font-weight: 700;
-    }
-    .rank-1 { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #0f172a; }
-    .rank-2 { background: linear-gradient(135deg, #cbd5e1, #94a3b8); color: #0f172a; }
-    .rank-3 { background: linear-gradient(135deg, #f97316, #ea580c); color: #fff; }
-    .rank-other { background: #334155; color: #94a3b8; }
-    .name-cell { font-weight: 600; color: #f8fafc; }
-    .sub-cell { font-size: 12px; color: #64748b; margin-top: 2px; }
-    .orders-cell { font-size: 16px; font-weight: 700; color: #fbbf24; text-align: center; }
-    .people-cell { font-size: 12px; color: #94a3b8; max-width: 300px; word-break: break-all; }
+    /* Tab Content */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
 
-    /* Two-column layout */
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    /* Ranking List - Compact */
+    .rank-list { display: flex; flex-direction: column; gap: 6px; }
+    .rank-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 14px; border-radius: 8px;
+      background: rgba(255,255,255,0.02); border: 1px solid rgba(51, 65, 85, 0.3);
+      transition: all 0.2s;
+    }
+    .rank-item:hover { background: rgba(255,255,255,0.05); border-color: rgba(251, 191, 36, 0.2); }
+    .rank-item .rank-num {
+      width: 32px; height: 32px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 800; flex-shrink: 0;
+    }
+    .rank-1 { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #0f172a; box-shadow: 0 0 12px rgba(251, 191, 36, 0.3); }
+    .rank-2 { background: linear-gradient(135deg, #e2e8f0, #94a3b8); color: #0f172a; }
+    .rank-3 { background: linear-gradient(135deg, #f97316, #ea580c); color: #fff; box-shadow: 0 0 12px rgba(249, 115, 22, 0.3); }
+    .rank-other { background: #1e293b; color: #94a3b8; border: 1px solid #334155; }
+    .rank-info { flex: 1; min-width: 0; }
+    .rank-info .name { font-size: 15px; font-weight: 600; color: #f8fafc; }
+    .rank-info .sub { font-size: 11px; color: #64748b; margin-top: 1px; }
+    .rank-score { font-size: 20px; font-weight: 800; color: #fbbf24; min-width: 48px; text-align: right; }
+    .rank-score .unit { font-size: 11px; color: #94a3b8; font-weight: 400; }
+
+    /* Section Box */
+    .section-box {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.8));
+      border: 1px solid rgba(51, 65, 85, 0.4);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    /* Top 3 highlight */
+    .rank-item.top-1 { border-color: rgba(251, 191, 36, 0.3); background: rgba(251, 191, 36, 0.05); }
+    .rank-item.top-2 { border-color: rgba(226, 232, 240, 0.2); background: rgba(226, 232, 240, 0.03); }
+    .rank-item.top-3 { border-color: rgba(249, 115, 22, 0.3); background: rgba(249, 115, 22, 0.05); }
 
     /* Responsive */
     @media (max-width: 900px) {
       .overview { grid-template-columns: repeat(2, 1fr); }
-      .two-col { grid-template-columns: 1fr; }
+      .header h1 { font-size: 32px; }
     }
     @media (max-width: 500px) {
-      .overview { grid-template-columns: 1fr; }
+      .overview { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .card .value { font-size: 28px; }
+      .header h1 { font-size: 26px; }
     }
   </style>
 </head>
@@ -106,70 +123,53 @@
     <!-- Overview Cards -->
     <div class="overview">
       <div class="card">
-        <div class="label">总出单人数</div>
+        <div class="label">出单人数</div>
         <div class="value" id="totalPeople">0</div>
-        <div class="sub">参与人员</div>
+        <div class="sub">参与作战</div>
       </div>
       <div class="card">
-        <div class="label">菁英班总个数</div>
+        <div class="label">菁英班出单</div>
         <div class="value highlight" id="totalOrders">0</div>
-        <div class="sub">累计出单</div>
+        <div class="sub">累计个数</div>
       </div>
       <div class="card">
-        <div class="label">参与分校</div>
+        <div class="label">作战分校</div>
         <div class="value" id="branchCount">0</div>
         <div class="sub">覆盖区域</div>
       </div>
       <div class="card">
-        <div class="label">参与军团</div>
+        <div class="label">作战军团</div>
         <div class="value" id="groupCount">0</div>
-        <div class="sub">作战单元</div>
+        <div class="sub">精锐单元</div>
       </div>
     </div>
 
-    <!-- Two Column: Branch + Group -->
-    <div class="two-col">
-      <!-- Branch Ranking -->
-      <div class="section">
-        <div class="section-header">
-          <h2>🏫 分校排行榜</h2>
-          <div class="count">按菁英班个数排序</div>
-        </div>
-        <table class="rank-table">
-          <thead>
-            <tr><th>排名</th><th>分校</th><th style="text-align:center">SKU个数</th></tr>
-          </thead>
-          <tbody id="branchTable"></tbody>
-        </table>
-      </div>
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('branch')">🏫 分校</button>
+      <button class="tab" onclick="switchTab('group')">⚔️ 军团</button>
+      <button class="tab" onclick="switchTab('person')">👑 个人</button>
+    </div>
 
-      <!-- Group Ranking -->
-      <div class="section">
-        <div class="section-header">
-          <h2>⚔️ 军团排行榜</h2>
-          <div class="count">按菁英班个数排序</div>
-        </div>
-        <table class="rank-table">
-          <thead>
-            <tr><th>排名</th><th>军团</th><th style="text-align:center">SKU个数</th></tr>
-          </thead>
-          <tbody id="groupTable"></tbody>
-        </table>
+    <!-- Branch Tab -->
+    <div class="tab-content active" id="branch-tab">
+      <div class="section-box">
+        <div class="rank-list" id="branchList"></div>
       </div>
     </div>
 
-    <!-- People Ranking -->
-    <div class="section">
-      <div class="section-header">
-        <h2>👑 个人排行榜</h2>
-        <div class="count">按菁英班个数排序</div>
+    <!-- Group Tab -->
+    <div class="tab-content" id="group-tab">
+      <div class="section-box">
+        <div class="rank-list" id="groupList"></div>
       </div>
-      <table class="rank-table">
-        <thead>
-          <tr><th>排名</th><th>lpc伙伴</th><th>所属军团</th><th style="text-align:center">SKU个数</th></tr>
-        </thead>
-        <tbody id="peopleTable"></tbody>
-      </table>
+    </div>
+
+    <!-- Person Tab -->
+    <div class="tab-content" id="person-tab">
+      <div class="section-box">
+        <div class="rank-list" id="personList"></div>
+      </div>
     </div>
   </div>
 
@@ -188,11 +188,14 @@
       }
     }
 
-    function render(data) {
-      // Header
-      document.getElementById('pageMeta').textContent = data.subtitle || data.dateRange;
+    function switchTab(tab) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelector(`button[onclick="switchTab('${tab}')"]`).classList.add('active');
+      document.getElementById(tab + '-tab').classList.add('active');
+    }
 
-      // Overview
+    function render(data) {
       const activeBranches = data.branches.filter(b => b.orders > 0);
       const activeGroups = data.groups.filter(g => g.orders > 0);
       document.getElementById('totalPeople').textContent = data.totalPeople;
@@ -200,59 +203,64 @@
       document.getElementById('branchCount').textContent = activeBranches.length;
       document.getElementById('groupCount').textContent = activeGroups.length;
 
-      // Branch Table (sorted by orders desc)
+      // Branch List
       const sortedBranches = [...data.branches].sort((a, b) => b.orders - a.orders);
-      const branchTbody = document.getElementById('branchTable');
+      const branchList = document.getElementById('branchList');
       sortedBranches.forEach((b, i) => {
         const rank = i + 1;
         const rankClass = rank === 1 ? 'rank-1' : rank === 2 ? 'rank-2' : rank === 3 ? 'rank-3' : 'rank-other';
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td class="rank-cell"><span class="rank-num ${rankClass}">${rank}</span></td>
-          <td>
-            <div class="name-cell">${b.name}</div>
-            <div class="sub-cell">${b.people.join('、')}</div>
-          </td>
-          <td class="orders-cell">${b.orders}</td>
+        const topClass = rank <= 3 ? `top-${rank}` : '';
+        const item = document.createElement('div');
+        item.className = `rank-item ${topClass}`;
+        item.innerHTML = `
+          <div class="rank-num ${rankClass}">${rank}</div>
+          <div class="rank-info">
+            <div class="name">${b.name}</div>
+            <div class="sub">${b.people.join('、')}</div>
+          </div>
+          <div class="rank-score">${b.orders}<span class="unit">单</span></div>
         `;
-        branchTbody.appendChild(row);
+        branchList.appendChild(item);
       });
 
-      // Group Table (sorted by orders desc)
+      // Group List
       const sortedGroups = [...data.groups].sort((a, b) => b.orders - a.orders);
-      const groupTbody = document.getElementById('groupTable');
+      const groupList = document.getElementById('groupList');
       sortedGroups.forEach((g, i) => {
         const rank = i + 1;
         const rankClass = rank === 1 ? 'rank-1' : rank === 2 ? 'rank-2' : rank === 3 ? 'rank-3' : 'rank-other';
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td class="rank-cell"><span class="rank-num ${rankClass}">${rank}</span></td>
-          <td>
-            <div class="name-cell">${g.name}</div>
-            <div class="sub-cell">${g.branch}</div>
-          </td>
-          <td class="orders-cell">${g.orders}</td>
+        const topClass = rank <= 3 ? `top-${rank}` : '';
+        const item = document.createElement('div');
+        item.className = `rank-item ${topClass}`;
+        item.innerHTML = `
+          <div class="rank-num ${rankClass}">${rank}</div>
+          <div class="rank-info">
+            <div class="name">${g.name}</div>
+            <div class="sub">${g.branch}</div>
+          </div>
+          <div class="rank-score">${g.orders}<span class="unit">单</span></div>
         `;
-        groupTbody.appendChild(row);
+        groupList.appendChild(item);
       });
 
-      // People Table (sorted by orders desc)
+      // Person List
       const sortedPeople = [...data.people].sort((a, b) => b.orders - a.orders);
-      const peopleTbody = document.getElementById('peopleTable');
+      const personList = document.getElementById('personList');
       sortedPeople.forEach((p, i) => {
         const rank = i + 1;
         const rankClass = rank === 1 ? 'rank-1' : rank === 2 ? 'rank-2' : rank === 3 ? 'rank-3' : 'rank-other';
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td class="rank-cell"><span class="rank-num ${rankClass}">${rank}</span></td>
-          <td class="name-cell">${p.name}</td>
-          <td>
-            <div class="name-cell">${p.group}</div>
-            <div class="sub-cell">${p.branch}</div>
-          </td>
-          <td class="orders-cell">${p.orders}</td>
+        const topClass = rank <= 3 ? `top-${rank}` : '';
+        const item = document.createElement('div');
+        item.className = `rank-item ${topClass}`;
+        item.innerHTML = `
+          <div class="rank-num ${rankClass}">${rank}</div>
+          <div class="rank-info">
+            <div class="name">${p.name}</div>
+            <div class="sub">${p.group} · ${p.branch}</div>
+          </div>
+          <div class="rank-score">${p.orders}<span class="unit">单</span></div>
         `;
-        peopleTbody.appendChild(row);
+        personList.appendChild(item);
       });
     }
 
