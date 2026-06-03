@@ -8,87 +8,170 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: #07080a;
+      background: #020408;
       color: #e2e8f0;
       line-height: 1.4;
       min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
     }
-    .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+    /* Animated grid background */
+    body::before {
+      content: '';
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* Floating orbs */
+    .orb {
+      position: fixed; border-radius: 50%;
+      filter: blur(80px); pointer-events: none; z-index: 0;
+      animation: float 20s ease-in-out infinite;
+    }
+    .orb-1 { width: 300px; height: 300px; background: rgba(6, 182, 212, 0.15); top: -100px; left: -100px; animation-delay: 0s; }
+    .orb-2 { width: 250px; height: 250px; background: rgba(168, 85, 247, 0.12); bottom: -80px; right: -80px; animation-delay: -7s; }
+    .orb-3 { width: 200px; height: 200px; background: rgba(236, 72, 153, 0.1); top: 50%; left: 50%; animation-delay: -14s; }
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -30px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+    }
 
-    /* Header */
-    .header { text-align: center; margin-bottom: 20px; padding: 12px 0; }
-    .header .subtitle { font-size: 11px; color: #f59e0b; letter-spacing: 4px; font-weight: 700; margin-bottom: 4px; }
-    .header h1 { font-size: 40px; font-weight: 900; color: #fff; text-shadow: 0 0 40px rgba(251, 191, 36, 0.25); margin-bottom: 4px; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 20px; position: relative; z-index: 1; }
+
+    /* Header with neon glow */
+    .header { text-align: center; margin-bottom: 24px; padding: 16px 0; position: relative; }
+    .header::after {
+      content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 200px; height: 1px;
+      background: linear-gradient(90deg, transparent, #06b6d4, #a855f7, #06b6d4, transparent);
+    }
+    .header .subtitle { font-size: 11px; color: #06b6d4; letter-spacing: 4px; font-weight: 800; margin-bottom: 6px; text-shadow: 0 0 10px rgba(6, 182, 212, 0.5); }
+    .header h1 {
+      font-size: 44px; font-weight: 900; color: #fff;
+      background: linear-gradient(90deg, #06b6d4, #a855f7, #ec4899, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: none;
+      margin-bottom: 6px;
+    }
     .header .meta { font-size: 13px; color: #6b7280; }
-    .header .status { display: inline-block; margin-top: 8px; padding: 3px 14px; background: linear-gradient(90deg, #dc2626, #ef4444); color: #fff; font-size: 10px; font-weight: 800; border-radius: 4px; letter-spacing: 1px; }
+    .header .status {
+      display: inline-block; margin-top: 10px; padding: 4px 16px;
+      background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3);
+      color: #06b6d4; font-size: 11px; font-weight: 800; border-radius: 20px;
+      letter-spacing: 1px; box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 15px rgba(6, 182, 212, 0.2); }
+      50% { box-shadow: 0 0 25px rgba(6, 182, 212, 0.4); }
+    }
 
-    /* Hero Section */
+    /* Hero Section with glassmorphism */
     .hero-section { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
     .hero-card {
       border-radius: 16px; padding: 24px; position: relative; overflow: hidden;
-      transition: transform 0.3s;
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .hero-card:hover { transform: translateY(-2px); }
+    .hero-card:hover { transform: translateY(-3px); }
     .hero-card::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
       background: linear-gradient(90deg, transparent, currentColor, transparent);
-      opacity: 0.5;
+      opacity: 0.6;
     }
     .hero-gold {
-      background: linear-gradient(135deg, rgba(251, 191, 36, 0.08), rgba(15, 23, 42, 0.95));
-      border: 1px solid rgba(251, 191, 36, 0.2); color: #fbbf24;
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.08), rgba(15, 23, 42, 0.6));
+      border: 1px solid rgba(251, 191, 36, 0.25); color: #fbbf24;
+      box-shadow: 0 8px 32px rgba(251, 191, 36, 0.1);
     }
-    .hero-blue {
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(15, 23, 42, 0.95));
-      border: 1px solid rgba(59, 130, 246, 0.2); color: #60a5fa;
+    .hero-gold:hover { box-shadow: 0 8px 40px rgba(251, 191, 36, 0.2); }
+    .hero-cyan {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(15, 23, 42, 0.6));
+      border: 1px solid rgba(6, 182, 212, 0.25); color: #06b6d4;
+      box-shadow: 0 8px 32px rgba(6, 182, 212, 0.1);
     }
+    .hero-cyan:hover { box-shadow: 0 8px 40px rgba(6, 182, 212, 0.2); }
     .hero-badge {
       position: absolute; top: 14px; right: 14px;
       padding: 3px 12px; border-radius: 20px; font-size: 10px; font-weight: 800; letter-spacing: 1px;
     }
-    .hero-gold .hero-badge { background: rgba(251, 191, 36, 0.12); border: 1px solid rgba(251, 191, 36, 0.25); color: #fbbf24; }
-    .hero-blue .hero-badge { background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.25); color: #60a5fa; }
+    .hero-gold .hero-badge { background: rgba(251, 191, 36, 0.12); border: 1px solid rgba(251, 191, 36, 0.3); color: #fbbf24; box-shadow: 0 0 10px rgba(251, 191, 36, 0.2); }
+    .hero-cyan .hero-badge { background: rgba(6, 182, 212, 0.12); border: 1px solid rgba(6, 182, 212, 0.3); color: #06b6d4; box-shadow: 0 0 10px rgba(6, 182, 212, 0.2); }
     .hero-label { font-size: 10px; letter-spacing: 3px; font-weight: 700; margin-bottom: 12px; opacity: 0.7; }
     .hero-body { display: flex; align-items: center; gap: 16px; }
     .hero-avatar {
       width: 60px; height: 60px; border-radius: 50%; flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
-      font-size: 24px; font-weight: 900;
+      font-size: 24px; font-weight: 900; position: relative;
     }
-    .hero-gold .hero-avatar { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #0f172a; box-shadow: 0 0 25px rgba(251, 191, 36, 0.3); }
-    .hero-blue .hero-avatar { background: linear-gradient(135deg, #60a5fa, #3b82f6); color: #0f172a; box-shadow: 0 0 25px rgba(59, 130, 246, 0.25); }
+    .hero-gold .hero-avatar {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #0f172a;
+      box-shadow: 0 0 30px rgba(251, 191, 36, 0.4), inset 0 0 20px rgba(255,255,255,0.2);
+    }
+    .hero-cyan .hero-avatar {
+      background: linear-gradient(135deg, #06b6d4, #0891b2); color: #0f172a;
+      box-shadow: 0 0 30px rgba(6, 182, 212, 0.4), inset 0 0 20px rgba(255,255,255,0.2);
+    }
     .hero-info h3 { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 3px; }
     .hero-info .sub { font-size: 12px; color: #9ca3af; }
     .hero-info .sub span { font-weight: 700; }
     .hero-stats { display: flex; gap: 20px; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06); }
     .hero-stat { text-align: center; }
     .hero-stat .num { font-size: 20px; font-weight: 800; }
-    .hero-gold .hero-stat .num { color: #fbbf24; }
-    .hero-blue .hero-stat .num { color: #60a5fa; }
+    .hero-gold .hero-stat .num { color: #fbbf24; text-shadow: 0 0 10px rgba(251, 191, 36, 0.3); }
+    .hero-cyan .hero-stat .num { color: #06b6d4; text-shadow: 0 0 10px rgba(6, 182, 212, 0.3); }
     .hero-stat .txt { font-size: 10px; color: #6b7280; letter-spacing: 1px; margin-top: 2px; }
 
-    /* Overview Cards */
+    /* Overview Cards - Neon */
     .overview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
     .card {
-      background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.8));
-      border: 1px solid rgba(51, 65, 85, 0.4); border-radius: 12px;
-      padding: 16px; text-align: center; position: relative;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.4), rgba(15, 23, 42, 0.6));
+      border: 1px solid rgba(51, 65, 85, 0.3); border-radius: 12px;
+      padding: 16px; text-align: center; position: relative; overflow: hidden;
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      transition: all 0.3s;
     }
+    .card:hover { transform: translateY(-3px); border-color: rgba(6, 182, 212, 0.4); box-shadow: 0 8px 32px rgba(6, 182, 212, 0.1); }
     .card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.3), transparent);
+      content: ''; position: absolute; top: 0; left: -100%; right: 0; height: 2px; width: 200%;
+      background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.5), rgba(168, 85, 247, 0.5), transparent);
+      animation: shimmer 3s linear infinite;
+    }
+    @keyframes shimmer {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(50%); }
     }
     .card .label { font-size: 10px; color: #6b7280; letter-spacing: 1px; margin-bottom: 6px; }
     .card .value { font-size: 32px; font-weight: 900; color: #fff; }
-    .card .value.gold { color: #fbbf24; text-shadow: 0 0 20px rgba(251, 191, 36, 0.2); }
+    .card .value.gold { color: #fbbf24; text-shadow: 0 0 20px rgba(251, 191, 36, 0.3); }
+    .card .value.cyan { color: #06b6d4; text-shadow: 0 0 20px rgba(6, 182, 212, 0.3); }
+    .card .value.purple { color: #a855f7; text-shadow: 0 0 20px rgba(168, 85, 247, 0.3); }
+    .card .value.pink { color: #ec4899; text-shadow: 0 0 20px rgba(236, 72, 153, 0.3); }
     .card .sub { font-size: 11px; color: #4b5563; margin-top: 2px; }
 
     /* Three Column Leaderboards */
     .boards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .board {
-      background: linear-gradient(135deg, rgba(30, 41, 59, 0.4), rgba(15, 23, 42, 0.6));
-      border: 1px solid rgba(51, 65, 85, 0.3); border-radius: 16px; padding: 20px;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.3), rgba(15, 23, 42, 0.5));
+      border: 1px solid rgba(51, 65, 85, 0.25); border-radius: 16px; padding: 20px;
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      position: relative; overflow: hidden;
     }
+    .board::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, currentColor, transparent);
+      opacity: 0.5;
+    }
+    .board-gold { color: #fbbf24; }
+    .board-cyan { color: #06b6d4; }
+    .board-purple { color: #a855f7; }
     .board-header {
       display: flex; justify-content: space-between; align-items: center;
       margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(51, 65, 85, 0.3);
@@ -96,28 +179,55 @@
     .board-header h2 { font-size: 16px; font-weight: 800; color: #fff; }
     .board-header .tag {
       padding: 3px 10px; border-radius: 6px; font-size: 10px; font-weight: 700;
-      background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.2); color: #fbbf24;
     }
+    .board-gold .tag { background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.2); color: #fbbf24; }
+    .board-cyan .tag { background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.2); color: #06b6d4; }
+    .board-purple .tag { background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.2); color: #a855f7; }
 
     .rank-item {
       display: flex; align-items: center; gap: 12px;
       padding: 10px 12px; margin-bottom: 6px; border-radius: 10px;
-      background: rgba(255,255,255,0.02); border: 1px solid rgba(51, 65, 85, 0.2);
-      transition: all 0.2s;
+      background: rgba(255,255,255,0.02); border: 1px solid rgba(51, 65, 85, 0.15);
+      transition: all 0.2s; position: relative;
     }
-    .rank-item:hover { background: rgba(255,255,255,0.05); border-color: rgba(251, 191, 36, 0.15); }
-    .rank-item.top-1 { background: rgba(251, 191, 36, 0.06); border-color: rgba(251, 191, 36, 0.25); }
-    .rank-item.top-2 { background: rgba(226, 232, 240, 0.04); border-color: rgba(226, 232, 240, 0.15); }
-    .rank-item.top-3 { background: rgba(249, 115, 22, 0.05); border-color: rgba(249, 115, 22, 0.2); }
+    .rank-item:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(6, 182, 212, 0.2);
+      box-shadow: 0 4px 20px rgba(6, 182, 212, 0.05);
+    }
+    .rank-item.top-1 {
+      background: rgba(251, 191, 36, 0.06);
+      border-color: rgba(251, 191, 36, 0.25);
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.1);
+    }
+    .rank-item.top-2 {
+      background: rgba(226, 232, 240, 0.04);
+      border-color: rgba(226, 232, 240, 0.15);
+      box-shadow: 0 0 15px rgba(226, 232, 240, 0.05);
+    }
+    .rank-item.top-3 {
+      background: rgba(249, 115, 22, 0.05);
+      border-color: rgba(249, 115, 22, 0.2);
+      box-shadow: 0 0 15px rgba(249, 115, 22, 0.1);
+    }
 
     .rank-num {
       width: 30px; height: 30px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-size: 12px; font-weight: 800; flex-shrink: 0;
     }
-    .rn-1 { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #0f172a; box-shadow: 0 0 12px rgba(251, 191, 36, 0.3); }
-    .rn-2 { background: linear-gradient(135deg, #e2e8f0, #94a3b8); color: #0f172a; }
-    .rn-3 { background: linear-gradient(135deg, #f97316, #ea580c); color: #fff; box-shadow: 0 0 10px rgba(249, 115, 22, 0.25); }
+    .rn-1 {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #0f172a;
+      box-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
+    }
+    .rn-2 {
+      background: linear-gradient(135deg, #e2e8f0, #94a3b8); color: #0f172a;
+      box-shadow: 0 0 12px rgba(226, 232, 240, 0.2);
+    }
+    .rn-3 {
+      background: linear-gradient(135deg, #f97316, #ea580c); color: #fff;
+      box-shadow: 0 0 12px rgba(249, 115, 22, 0.3);
+    }
     .rn-other { background: #1e293b; color: #6b7280; border: 1px solid #334155; font-size: 11px; }
 
     .rank-info { flex: 1; min-width: 0; }
@@ -127,24 +237,37 @@
 
     .rank-bar-wrap { flex: 1; max-width: 80px; height: 5px; background: rgba(51, 65, 85, 0.4); border-radius: 3px; overflow: hidden; }
     .rank-bar { height: 100%; border-radius: 3px; transition: width 0.6s ease; }
-    .rank-bar.gold { background: linear-gradient(90deg, #fbbf24, #f59e0b); }
+    .rank-bar.gold { background: linear-gradient(90deg, #fbbf24, #f59e0b); box-shadow: 0 0 8px rgba(251, 191, 36, 0.3); }
     .rank-bar.silver { background: linear-gradient(90deg, #e2e8f0, #94a3b8); }
     .rank-bar.bronze { background: linear-gradient(90deg, #f97316, #ea580c); }
+    .rank-bar.cyan { background: linear-gradient(90deg, #06b6d4, #0891b2); box-shadow: 0 0 8px rgba(6, 182, 212, 0.3); }
+    .rank-bar.purple { background: linear-gradient(90deg, #a855f7, #7c3aed); box-shadow: 0 0 8px rgba(168, 85, 247, 0.3); }
     .rank-bar.normal { background: linear-gradient(90deg, #475569, #64748b); }
 
     .rank-score { font-size: 18px; font-weight: 800; color: #fbbf24; min-width: 36px; text-align: right; }
     .rank-score .unit { font-size: 10px; color: #6b7280; font-weight: 400; margin-left: 2px; }
 
-    /* People board special - all 1 order */
+    /* People board - neon chips */
     .people-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
     .person-chip {
       display: flex; align-items: center; gap: 8px;
       padding: 8px 10px; border-radius: 8px;
-      background: rgba(255,255,255,0.02); border: 1px solid rgba(51, 65, 85, 0.2);
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(51, 65, 85, 0.2);
       font-size: 12px;
+      transition: all 0.2s;
     }
-    .person-chip:hover { background: rgba(255,255,255,0.05); border-color: rgba(251, 191, 36, 0.15); }
-    .person-chip .dot { width: 6px; height: 6px; border-radius: 50%; background: #fbbf24; flex-shrink: 0; }
+    .person-chip:hover {
+      background: rgba(6, 182, 212, 0.05);
+      border-color: rgba(6, 182, 212, 0.3);
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.1);
+    }
+    .person-chip .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #06b6d4;
+      box-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+      flex-shrink: 0;
+    }
     .person-chip .p-name { font-weight: 600; color: #f8fafc; }
     .person-chip .p-sub { font-size: 10px; color: #6b7280; margin-left: auto; }
 
@@ -165,6 +288,10 @@
   </style>
 </head>
 <body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
   <div class="container">
     <!-- Header -->
     <div class="header">
@@ -174,9 +301,8 @@
       <div class="status">LIVE</div>
     </div>
 
-    <!-- Hero: Champion + All Participants -->
+    <!-- Hero Section -->
     <div class="hero-section">
-      <!-- Champion Group -->
       <div class="hero-card hero-gold">
         <div class="hero-badge">🏆 领跑军团</div>
         <div class="hero-label">CHAMPION GROUP</div>
@@ -193,8 +319,7 @@
         </div>
       </div>
 
-      <!-- Participants -->
-      <div class="hero-card hero-blue">
+      <div class="hero-card hero-cyan">
         <div class="hero-badge">✓ 出单勇士</div>
         <div class="hero-label">HEROES ON BOARD</div>
         <div class="hero-body">
@@ -205,37 +330,53 @@
           </div>
         </div>
         <div class="hero-stats">
-          <div class="hero-stat"><div class="num" style="color:#60a5fa;">17</div><div class="txt">总人数</div></div>
-          <div class="hero-stat"><div class="num" style="color:#60a5fa;">17</div><div class="txt">总单数</div></div>
-          <div class="hero-stat"><div class="num" style="color:#60a5fa;">6</div><div class="txt">分校</div></div>
+          <div class="hero-stat"><div class="num" style="color:#06b6d4;">17</div><div class="txt">总人数</div></div>
+          <div class="hero-stat"><div class="num" style="color:#06b6d4;">17</div><div class="txt">总单数</div></div>
+          <div class="hero-stat"><div class="num" style="color:#06b6d4;">6</div><div class="txt">分校</div></div>
         </div>
       </div>
     </div>
 
     <!-- Overview Cards -->
     <div class="overview">
-      <div class="card"><div class="label">出单人数</div><div class="value" id="totalPeople">0</div><div class="sub">lpc伙伴</div></div>
-      <div class="card"><div class="label">菁英班出单</div><div class="value gold" id="totalOrders">0</div><div class="sub">累计个数</div></div>
-      <div class="card"><div class="label">作战分校</div><div class="value" id="branchCount">0</div><div class="sub">覆盖区域</div></div>
-      <div class="card"><div class="label">作战军团</div><div class="value" id="groupCount">0</div><div class="sub">精锐单元</div></div>
+      <div class="card">
+        <div class="label">出单人数</div>
+        <div class="value cyan" id="totalPeople">0</div>
+        <div class="sub">lpc伙伴</div>
+      </div>
+      <div class="card">
+        <div class="label">菁英班出单</div>
+        <div class="value gold" id="totalOrders">0</div>
+        <div class="sub">累计个数</div>
+      </div>
+      <div class="card">
+        <div class="label">作战分校</div>
+        <div class="value purple" id="branchCount">0</div>
+        <div class="sub">覆盖区域</div>
+      </div>
+      <div class="card">
+        <div class="label">作战军团</div>
+        <div class="value pink" id="groupCount">0</div>
+        <div class="sub">精锐单元</div>
+      </div>
     </div>
 
     <!-- Three Boards -->
     <div class="boards-grid">
       <!-- Branch Board -->
-      <div class="board">
+      <div class="board board-cyan">
         <div class="board-header"><h2>🏫 分校排行榜</h2><div class="tag">按菁英班个数</div></div>
         <div id="branchList"></div>
       </div>
 
       <!-- Group Board -->
-      <div class="board">
+      <div class="board board-gold">
         <div class="board-header"><h2>⚔️ 军团排行榜</h2><div class="tag">按菁英班个数</div></div>
         <div id="groupList"></div>
       </div>
 
       <!-- Person Board -->
-      <div class="board">
+      <div class="board board-purple">
         <div class="board-header"><h2>👑 个人排行榜</h2><div class="tag">已出单勇士</div></div>
         <div id="personList"></div>
       </div>
@@ -260,7 +401,6 @@
       document.getElementById('branchCount').textContent = activeBranches.length;
       document.getElementById('groupCount').textContent = activeGroups.length;
 
-      // Champion Group
       if (data.championGroup) {
         const cg = data.championGroup;
         document.getElementById('championGroupName').textContent = cg.name;
@@ -269,7 +409,6 @@
         document.getElementById('cgPeople').textContent = cg.people.length;
       }
 
-      // Branch List
       const bMax = Math.max(...activeBranches.map(b => b.orders));
       const branchList = document.getElementById('branchList');
       [...data.branches].sort((a, b) => b.orders - a.orders).forEach((b, i) => {
@@ -277,7 +416,7 @@
         const rank = i + 1;
         const topClass = rank <= 3 ? `top-${rank}` : '';
         const rnClass = rank === 1 ? 'rn-1' : rank === 2 ? 'rn-2' : rank === 3 ? 'rn-3' : 'rn-other';
-        const barClass = rank === 1 ? 'gold' : rank === 2 ? 'silver' : rank === 3 ? 'bronze' : 'normal';
+        const barClass = rank === 1 ? 'gold' : rank === 2 ? 'silver' : rank === 3 ? 'bronze' : 'cyan';
         const pct = bMax > 0 ? (b.orders / bMax * 100) : 0;
         const div = document.createElement('div');
         div.className = `rank-item ${topClass}`;
@@ -290,7 +429,6 @@
         branchList.appendChild(div);
       });
 
-      // Group List
       const gMax = Math.max(...activeGroups.map(g => g.orders));
       const groupList = document.getElementById('groupList');
       [...data.groups].sort((a, b) => b.orders - a.orders).forEach((g, i) => {
@@ -311,7 +449,6 @@
         groupList.appendChild(div);
       });
 
-      // Person List - all 1 order, show as grid chips grouped by branch
       const personList = document.getElementById('personList');
       const byBranch = {};
       data.people.forEach(p => {
@@ -323,7 +460,7 @@
         const groupDiv = document.createElement('div');
         groupDiv.style.marginBottom = '12px';
         const header = document.createElement('div');
-        header.style.cssText = 'font-size:11px;color:#6b7280;font-weight:700;margin-bottom:6px;letter-spacing:1px;';
+        header.style.cssText = 'font-size:11px;color:#a855f7;font-weight:700;margin-bottom:6px;letter-spacing:1px;text-shadow:0 0 8px rgba(168,85,247,0.3);';
         header.textContent = `${branch} · ${people.length}人`;
         groupDiv.appendChild(header);
 
