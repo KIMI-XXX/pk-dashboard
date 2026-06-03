@@ -8,33 +8,34 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: #020408;
+      background: #0f172a;
       color: #e2e8f0;
       line-height: 1.4;
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
     }
-    /* Animated grid background */
+    /* Animated grid background - brighter */
     body::before {
       content: '';
       position: fixed; top: 0; left: 0; right: 0; bottom: 0;
       background-image:
-        linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(6, 182, 212, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6, 182, 212, 0.06) 1px, transparent 1px);
       background-size: 50px 50px;
       pointer-events: none;
       z-index: 0;
     }
-    /* Floating orbs */
+    /* Floating orbs - brighter and more visible */
     .orb {
       position: fixed; border-radius: 50%;
-      filter: blur(80px); pointer-events: none; z-index: 0;
+      filter: blur(60px); pointer-events: none; z-index: 0;
       animation: float 20s ease-in-out infinite;
     }
-    .orb-1 { width: 300px; height: 300px; background: rgba(6, 182, 212, 0.15); top: -100px; left: -100px; animation-delay: 0s; }
-    .orb-2 { width: 250px; height: 250px; background: rgba(168, 85, 247, 0.12); bottom: -80px; right: -80px; animation-delay: -7s; }
-    .orb-3 { width: 200px; height: 200px; background: rgba(236, 72, 153, 0.1); top: 50%; left: 50%; animation-delay: -14s; }
+    .orb-1 { width: 400px; height: 400px; background: rgba(6, 182, 212, 0.2); top: -150px; left: -100px; animation-delay: 0s; }
+    .orb-2 { width: 350px; height: 350px; background: rgba(168, 85, 247, 0.18); bottom: -100px; right: -100px; animation-delay: -7s; }
+    .orb-3 { width: 300px; height: 300px; background: rgba(236, 72, 153, 0.15); top: 40%; left: 60%; animation-delay: -14s; }
+    .orb-4 { width: 250px; height: 250px; background: rgba(251, 191, 36, 0.12); top: 20%; right: 30%; animation-delay: -10s; }
     @keyframes float {
       0%, 100% { transform: translate(0, 0) scale(1); }
       33% { transform: translate(30px, -30px) scale(1.1); }
@@ -291,6 +292,7 @@
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
 
   <div class="container">
     <!-- Header -->
