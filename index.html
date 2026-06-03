@@ -412,7 +412,6 @@
       const bMax = Math.max(...activeBranches.map(b => b.orders));
       const branchList = document.getElementById('branchList');
       [...data.branches].sort((a, b) => b.orders - a.orders).forEach((b, i) => {
-        if (b.orders === 0) return;
         const rank = i + 1;
         const topClass = rank <= 3 ? `top-${rank}` : '';
         const rnClass = rank === 1 ? 'rn-1' : rank === 2 ? 'rn-2' : rank === 3 ? 'rn-3' : 'rn-other';
