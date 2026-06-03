@@ -156,8 +156,26 @@
     .card .value.pink { color: #ec4899; text-shadow: 0 0 20px rgba(236, 72, 153, 0.3); }
     .card .sub { font-size: 11px; color: #4b5563; margin-top: 2px; }
 
-    /* Three Column Leaderboards */
-    .boards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    /* Three Column Leaderboards - Branch gets more space */
+    .boards-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 16px; }
+
+    /* Branch board - larger, more prominent (1级部门) */
+    .board-branch { font-size: 1.05em; }
+    .board-branch .rank-item { padding: 12px 14px; margin-bottom: 8px; }
+    .board-branch .rank-info .name { font-size: 15px; }
+    .board-branch .rank-info .sub { font-size: 12px; }
+    .board-branch .rank-num { width: 34px; height: 34px; font-size: 13px; }
+    .board-branch .rank-score { font-size: 20px; }
+    .board-branch .rank-bar-wrap { max-width: 100px; height: 6px; }
+
+    /* Group board - standard (2级部门) */
+    .board-group { }
+
+    /* Person board - most compact (4级) */
+    .board-person { font-size: 0.95em; }
+    .board-person .rank-item { padding: 8px 10px; margin-bottom: 5px; }
+    .board-person .rank-info .name { font-size: 13px; }
+    .board-person .rank-num { width: 26px; height: 26px; font-size: 11px; }
     .board {
       background: linear-gradient(135deg, rgba(30, 41, 59, 0.3), rgba(15, 23, 42, 0.5));
       border: 1px solid rgba(51, 65, 85, 0.25); border-radius: 16px; padding: 20px;
@@ -364,19 +382,19 @@
     <!-- Three Boards -->
     <div class="boards-grid">
       <!-- Branch Board -->
-      <div class="board board-cyan">
+      <div class="board board-cyan board-branch">
         <div class="board-header"><h2>🏫 分校排行榜</h2><div class="tag">按菁英班个数</div></div>
         <div id="branchList"></div>
       </div>
 
       <!-- Group Board -->
-      <div class="board board-gold">
+      <div class="board board-gold board-group">
         <div class="board-header"><h2>⚔️ 军团排行榜</h2><div class="tag">按菁英班个数</div></div>
         <div id="groupList"></div>
       </div>
 
       <!-- Person Board -->
-      <div class="board board-purple">
+      <div class="board board-purple board-person">
         <div class="board-header"><h2>👑 个人排行榜</h2><div class="tag">已出单勇士</div></div>
         <div id="personList"></div>
       </div>
