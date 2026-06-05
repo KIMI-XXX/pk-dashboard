@@ -2,8 +2,8 @@
   "period": "5月11日-8月1日",
   "dateRange": "5月11日-8月1日",
   "subtitle": "菁英班火力全开ing",
-  "totalPeople": 17,
-  "totalOrders": 17,
+  "totalPeople": 18,
+  "totalOrders": 18,
   "championGroup": { "name": "西安L团-张乐成", "orders": 3, "branch": "西安一部", "people": ["马菁菁05", "梅艳芳", "张晨阳06"] },
   "championPerson": null,
   "branches": [
@@ -12,7 +12,7 @@
     { "name": "重庆二部", "orders": 3, "people": ["曹杰09", "冉雪萍02", "周刚05"] },
     { "name": "郑州二部", "orders": 2, "people": ["郭晓坤", "权钲彬"] },
     { "name": "重庆三部", "orders": 2, "people": ["王前顺", "严文姬"] },
-    { "name": "重庆一部", "orders": 1, "people": ["屈琪武"] },
+    { "name": "重庆一部", "orders": 2, "people": ["屈琪武", "李国庆10"] },
     { "name": "西安三部", "orders": 0, "people": [] }
   ],
   "groups": [
@@ -26,7 +26,7 @@
     { "name": "成都X团-陈紫夷", "orders": 1, "branch": "成都一部" },
     { "name": "西安A团-刘晨辉", "orders": 1, "branch": "西安一部" },
     { "name": "重庆D团-帅洁城", "orders": 1, "branch": "重庆二部" },
-    { "name": "重庆Y团-方阳威", "orders": 1, "branch": "重庆一部" }
+    { "name": "重庆Y团-方阳威", "orders": 2, "branch": "重庆一部" }
   ],
   "people": [
     { "name": "金思慧", "orders": 1, "group": "成都E团-苏琼瑶", "branch": "成都一部" },
@@ -45,6 +45,7 @@
     { "name": "周刚05", "orders": 1, "group": "重庆D团-帅洁城", "branch": "重庆二部" },
     { "name": "王前顺", "orders": 1, "group": "重庆H团-李航", "branch": "重庆三部" },
     { "name": "严文姬", "orders": 1, "group": "重庆H团-李航", "branch": "重庆三部" },
-    { "name": "屈琪武", "orders": 1, "group": "重庆Y团-方阳威", "branch": "重庆一部" }
+    { "name": "屈琪武", "orders": 1, "group": "重庆Y团-方阳威", "branch": "重庆一部" },
+    { "name": "李国庆10", "orders": 1, "group": "重庆Y团-方阳威", "branch": "重庆一部" }
   ]
 }
