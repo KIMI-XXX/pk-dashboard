@@ -325,16 +325,16 @@
         <div class="hero-badge">✓ 出单勇士</div>
         <div class="hero-label">HEROES ON BOARD</div>
         <div class="hero-body">
-          <div class="hero-avatar" style="font-size:20px;">17人</div>
+          <div class="hero-avatar" style="font-size:20px;" id="heroPeople">--人</div>
           <div class="hero-info">
             <h3>首批出单勇士</h3>
-            <div class="sub">17位lpc伙伴已破零，每人 <span>1单</span></div>
+            <div class="sub" id="heroSubDesc">--位lpc伙伴已破零，每人 <span>1单</span></div>
           </div>
         </div>
         <div class="hero-stats">
-          <div class="hero-stat"><div class="num" style="color:#06b6d4;">17</div><div class="txt">总人数</div></div>
-          <div class="hero-stat"><div class="num" style="color:#06b6d4;">17</div><div class="txt">总单数</div></div>
-          <div class="hero-stat"><div class="num" style="color:#06b6d4;">6</div><div class="txt">分校</div></div>
+          <div class="hero-stat"><div class="num" style="color:#06b6d4;" id="heroTotalPeople">0</div><div class="txt">总人数</div></div>
+          <div class="hero-stat"><div class="num" style="color:#06b6d4;" id="heroTotalOrders">0</div><div class="txt">总单数</div></div>
+          <div class="hero-stat"><div class="num" style="color:#06b6d4;" id="heroBranchCount">0</div><div class="txt">分校</div></div>
         </div>
       </div>
     </div>
@@ -397,6 +397,13 @@
     function render(data) {
       const activeBranches = data.branches.filter(b => b.orders > 0);
       const activeGroups = data.groups.filter(g => g.orders > 0);
+
+      // 更新出单勇士卡片
+      document.getElementById('heroPeople').textContent = data.totalPeople + '人';
+      document.getElementById('heroSubDesc').innerHTML = data.totalPeople + '位lpc伙伴已破零，每人 <span>1单</span>';
+      document.getElementById('heroTotalPeople').textContent = data.totalPeople;
+      document.getElementById('heroTotalOrders').textContent = data.totalOrders;
+      document.getElementById('heroBranchCount').textContent = activeBranches.length;
 
       document.getElementById('totalPeople').textContent = data.totalPeople;
       document.getElementById('totalOrders').textContent = data.totalOrders;
