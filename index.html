@@ -142,8 +142,8 @@
     .hero-purple .hero-stat .num { color: #a855f7; text-shadow: 0 0 10px rgba(168, 85, 247, 0.3); }
     .hero-stat .txt { font-size: 10px; color: #6b7280; letter-spacing: 1px; margin-top: 2px; }
 
-    /* Overview Cards - Neon */
-    .overview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+    /* Branch Cards - Neon */
+    .overview { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 20px; }
     .card {
       background: linear-gradient(135deg, rgba(30, 41, 59, 0.4), rgba(15, 23, 42, 0.6));
       border: 1px solid rgba(51, 65, 85, 0.3); border-radius: 12px;
@@ -288,7 +288,10 @@
     @media (max-width: 1100px) {
       .boards-grid { grid-template-columns: 1fr; }
       .hero-section { grid-template-columns: repeat(2, 1fr); }
-      .overview { grid-template-columns: repeat(2, 1fr); }
+      .overview { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .overview { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 500px) {
       .overview { grid-template-columns: repeat(2, 1fr); gap: 8px; }
@@ -367,38 +370,11 @@
       </div>
     </div>
 
-    <!-- Overview Cards -->
-    <div class="overview">
-      <div class="card">
-        <div class="label">出单人数</div>
-        <div class="value cyan" id="totalPeople">0</div>
-        <div class="sub">lpc伙伴</div>
-      </div>
-      <div class="card">
-        <div class="label">菁英班出单</div>
-        <div class="value gold" id="totalOrders">0</div>
-        <div class="sub">累计个数</div>
-      </div>
-      <div class="card">
-        <div class="label">作战分校</div>
-        <div class="value purple" id="branchCount">0</div>
-        <div class="sub">覆盖区域</div>
-      </div>
-      <div class="card">
-        <div class="label">作战军团</div>
-        <div class="value pink" id="groupCount">0</div>
-        <div class="sub">精锐单元</div>
-      </div>
-    </div>
+    <!-- Branch Cards -->
+    <div class="overview" id="branchCards"></div>
 
-    <!-- Three Boards -->
+    <!-- Two Boards -->
     <div class="boards-grid">
-      <!-- Branch Board -->
-      <div class="board board-cyan">
-        <div class="board-header"><h2>🏫 分校排行榜</h2><div class="tag">按菁英班个数</div></div>
-        <div id="branchList"></div>
-      </div>
-
       <!-- Group Board -->
       <div class="board board-gold">
         <div class="board-header"><h2>⚔️ 军团排行榜</h2><div class="tag">按菁英班个数</div></div>
@@ -433,10 +409,20 @@
       document.getElementById('heroTotalOrders').textContent = data.totalOrders;
       document.getElementById('heroBranchCount').textContent = activeBranches.length;
 
-      document.getElementById('totalPeople').textContent = data.totalPeople;
-      document.getElementById('totalOrders').textContent = data.totalOrders;
-      document.getElementById('branchCount').textContent = activeBranches.length;
-      document.getElementById('groupCount').textContent = activeGroups.length;
+      // 渲染分校卡片
+      const branchCards = document.getElementById('branchCards');
+      const colors = ['cyan', 'gold', 'purple', 'pink', 'cyan', 'gold', 'purple'];
+      [...data.branches].sort((a, b) => b.orders - a.orders).forEach((b, i) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        const color = colors[i % colors.length];
+        card.innerHTML = `
+          <div class="label">${b.name}</div>
+          <div class="value ${color}">${b.orders}</div>
+          <div class="sub">${b.people.length}人出单</div>
+        `;
+        branchCards.appendChild(card);
+      });
 
       if (data.championGroup) {
         const cg = data.championGroup;
