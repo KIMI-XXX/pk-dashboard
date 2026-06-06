@@ -404,8 +404,8 @@
     }
 
     function render(data) {
-      const activeBranches = data.branches.filter(b => b.orders > 0);
-      const activeGroups = data.groups.filter(g => g.orders > 0);
+      const activeBranches = data.branches || [];
+      const activeGroups = data.groups || [];
 
       // 更新出单勇士卡片
       document.getElementById('heroPeople').textContent = data.totalPeople + '人';
