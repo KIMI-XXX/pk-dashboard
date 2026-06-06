@@ -443,25 +443,6 @@
         document.getElementById('cpRank').textContent = '#' + (cp.rank || 1);
       }
 
-      const bMax = Math.max(...activeBranches.map(b => b.orders));
-      const branchList = document.getElementById('branchList');
-      [...data.branches].sort((a, b) => b.orders - a.orders).forEach((b, i) => {
-        const rank = i + 1;
-        const topClass = rank <= 3 ? `top-${rank}` : '';
-        const rnClass = rank === 1 ? 'rn-1' : rank === 2 ? 'rn-2' : rank === 3 ? 'rn-3' : 'rn-other';
-        const barClass = rank === 1 ? 'gold' : rank === 2 ? 'silver' : rank === 3 ? 'bronze' : 'cyan';
-        const pct = bMax > 0 ? (b.orders / bMax * 100) : 0;
-        const div = document.createElement('div');
-        div.className = `rank-item ${topClass}`;
-        div.innerHTML = `
-          <div class="rank-num ${rnClass}">${rank}</div>
-          <div class="rank-info"><div class="name">${b.name}</div><div class="sub">${b.people.length}人已出单</div></div>
-          <div class="rank-bar-wrap"><div class="rank-bar ${barClass}" style="width:${pct}%"></div></div>
-          <div class="rank-score">${b.orders}<span class="unit">单</span></div>
-        `;
-        branchList.appendChild(div);
-      });
-
       const gMax = Math.max(...activeGroups.map(g => g.orders));
       const groupList = document.getElementById('groupList');
       [...data.groups].sort((a, b) => b.orders - a.orders).forEach((g, i) => {
