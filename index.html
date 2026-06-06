@@ -75,7 +75,7 @@
     }
 
     /* Hero Section with glassmorphism */
-    .hero-section { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+    .hero-section { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px; }
     .hero-card {
       border-radius: 16px; padding: 24px; position: relative; overflow: hidden;
       backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
@@ -99,12 +99,19 @@
       box-shadow: 0 8px 32px rgba(6, 182, 212, 0.1);
     }
     .hero-cyan:hover { box-shadow: 0 8px 40px rgba(6, 182, 212, 0.2); }
+    .hero-purple {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(15, 23, 42, 0.6));
+      border: 1px solid rgba(168, 85, 247, 0.25); color: #a855f7;
+      box-shadow: 0 8px 32px rgba(168, 85, 247, 0.1);
+    }
+    .hero-purple:hover { box-shadow: 0 8px 40px rgba(168, 85, 247, 0.2); }
     .hero-badge {
       position: absolute; top: 14px; right: 14px;
       padding: 3px 12px; border-radius: 20px; font-size: 10px; font-weight: 800; letter-spacing: 1px;
     }
     .hero-gold .hero-badge { background: rgba(251, 191, 36, 0.12); border: 1px solid rgba(251, 191, 36, 0.3); color: #fbbf24; box-shadow: 0 0 10px rgba(251, 191, 36, 0.2); }
     .hero-cyan .hero-badge { background: rgba(6, 182, 212, 0.12); border: 1px solid rgba(6, 182, 212, 0.3); color: #06b6d4; box-shadow: 0 0 10px rgba(6, 182, 212, 0.2); }
+    .hero-purple .hero-badge { background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.3); color: #a855f7; box-shadow: 0 0 10px rgba(168, 85, 247, 0.2); }
     .hero-label { font-size: 10px; letter-spacing: 3px; font-weight: 700; margin-bottom: 12px; opacity: 0.7; }
     .hero-body { display: flex; align-items: center; gap: 16px; }
     .hero-avatar {
@@ -120,6 +127,10 @@
       background: linear-gradient(135deg, #06b6d4, #0891b2); color: #0f172a;
       box-shadow: 0 0 30px rgba(6, 182, 212, 0.4), inset 0 0 20px rgba(255,255,255,0.2);
     }
+    .hero-purple .hero-avatar {
+      background: linear-gradient(135deg, #a855f7, #7c3aed); color: #fff;
+      box-shadow: 0 0 30px rgba(168, 85, 247, 0.4), inset 0 0 20px rgba(255,255,255,0.2);
+    }
     .hero-info h3 { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 3px; }
     .hero-info .sub { font-size: 12px; color: #9ca3af; }
     .hero-info .sub span { font-weight: 700; }
@@ -128,6 +139,7 @@
     .hero-stat .num { font-size: 20px; font-weight: 800; }
     .hero-gold .hero-stat .num { color: #fbbf24; text-shadow: 0 0 10px rgba(251, 191, 36, 0.3); }
     .hero-cyan .hero-stat .num { color: #06b6d4; text-shadow: 0 0 10px rgba(6, 182, 212, 0.3); }
+    .hero-purple .hero-stat .num { color: #a855f7; text-shadow: 0 0 10px rgba(168, 85, 247, 0.3); }
     .hero-stat .txt { font-size: 10px; color: #6b7280; letter-spacing: 1px; margin-top: 2px; }
 
     /* Overview Cards - Neon */
@@ -275,7 +287,7 @@
     /* Responsive */
     @media (max-width: 1100px) {
       .boards-grid { grid-template-columns: 1fr; }
-      .hero-section { grid-template-columns: 1fr; }
+      .hero-section { grid-template-columns: repeat(2, 1fr); }
       .overview { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 500px) {
@@ -327,7 +339,7 @@
         <div class="hero-body">
           <div class="hero-avatar" style="font-size:20px;" id="heroPeople">--人</div>
           <div class="hero-info">
-            <h3>首批出单勇士</h3>
+            <h3>出单勇士</h3>
             <div class="sub" id="heroSubDesc">--位lpc伙伴已破零，每人 <span>1单</span></div>
           </div>
         </div>
@@ -335,6 +347,22 @@
           <div class="hero-stat"><div class="num" style="color:#06b6d4;" id="heroTotalPeople">0</div><div class="txt">总人数</div></div>
           <div class="hero-stat"><div class="num" style="color:#06b6d4;" id="heroTotalOrders">0</div><div class="txt">总单数</div></div>
           <div class="hero-stat"><div class="num" style="color:#06b6d4;" id="heroBranchCount">0</div><div class="txt">分校</div></div>
+        </div>
+      </div>
+
+      <div class="hero-card hero-purple">
+        <div class="hero-badge">👑 菁英班之星</div>
+        <div class="hero-label">CHAMPION STAR</div>
+        <div class="hero-body">
+          <div class="hero-avatar" style="font-size:18px;">1st</div>
+          <div class="hero-info">
+            <h3 id="championPersonName">--</h3>
+            <div class="sub" id="championPersonSub">--</div>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num" style="color:#a855f7;" id="cpOrders">0</div><div class="txt">出单</div></div>
+          <div class="hero-stat"><div class="num" style="color:#a855f7;" id="cpRank">#1</div><div class="txt">排名</div></div>
         </div>
       </div>
     </div>
@@ -416,6 +444,14 @@
         document.getElementById('championGroupSub').innerHTML = `<span>${cg.branch}</span> · ${cg.people.join('、')}`;
         document.getElementById('cgOrders').textContent = cg.orders;
         document.getElementById('cgPeople').textContent = cg.people.length;
+      }
+
+      if (data.championPerson) {
+        const cp = data.championPerson;
+        document.getElementById('championPersonName').textContent = cp.name;
+        document.getElementById('championPersonSub').innerHTML = `<span>${cp.branch}</span> · ${cp.group}`;
+        document.getElementById('cpOrders').textContent = cp.orders;
+        document.getElementById('cpRank').textContent = '#' + (cp.rank || 1);
       }
 
       const bMax = Math.max(...activeBranches.map(b => b.orders));

@@ -8,6 +8,13 @@
     "people": ["马菁菁05", "梅艳芳", "张晨阳06"],
     "orders": 4
   },
+  "championPerson": {
+    "name": "马菁菁05",
+    "branch": "西安一部",
+    "group": "西安L团-张乐成",
+    "orders": 1,
+    "rank": 1
+  },
   "branches": [
     {"name": "西安一部", "people": [{"name": "刘东18", "group": "西安A团-刘晨辉"}, {"name": "杜屿06", "group": "西安E团-杨锋"}, {"name": "寇佳佳", "group": "西安E团-杨锋"}, {"name": "马菁菁05", "group": "西安L团-张乐成"}, {"name": "梅艳芳", "group": "西安L团-张乐成"}, {"name": "张晨阳06", "group": "西安L团-张乐成"}, {"name": "胡静24", "group": "西安A团-刘晨辉"}, {"name": "魏小霞01", "group": "西安A团-刘晨辉"}], "orders": 9},
     {"name": "重庆二部", "people": [{"name": "曹杰09", "group": "重庆C团-陈琴"}, {"name": "冉雪萍02", "group": "重庆C团-陈琴"}, {"name": "周刚05", "group": "重庆D团-帅洁城"}, {"name": "刘骞49", "group": "重庆D团-帅洁城"}], "orders": 4},
