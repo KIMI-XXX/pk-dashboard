@@ -1,259 +1,61 @@
 {
-  "period": "5月11日-8月1日",
   "dateRange": "5月11日-8月1日",
-  "subtitle": "菁英班火力全开ing",
-  "totalPeople": 19,
-  "totalOrders": 19,
+  "totalPeople": 25,
+  "totalOrders": 26,
   "championGroup": {
     "name": "西安L团-张乐成",
-    "orders": 3,
     "branch": "西安一部",
-    "people": [
-      "马菁菁05",
-      "梅艳芳",
-      "张晨阳06"
-    ]
+    "people": ["马菁菁05", "梅艳芳", "张晨阳06"],
+    "orders": 4
   },
-  "championPerson": null,
   "branches": [
-    {
-      "name": "西安一部",
-      "orders": 6,
-      "people": [
-        "刘东18",
-        "杜屿06",
-        "寇佳佳",
-        "马菁菁05",
-        "梅艳芳",
-        "张晨阳06"
-      ]
-    },
-    {
-      "name": "成都一部",
-      "orders": 3,
-      "people": [
-        "金思慧",
-        "周江01",
-        "杨倩28"
-      ]
-    },
-    {
-      "name": "重庆二部",
-      "orders": 3,
-      "people": [
-        "曹杰09",
-        "冉雪萍02",
-        "周刚05"
-      ]
-    },
-    {
-      "name": "郑州二部",
-      "orders": 2,
-      "people": [
-        "郭晓坤",
-        "权钲彬"
-      ]
-    },
-    {
-      "name": "重庆三部",
-      "orders": 2,
-      "people": [
-        "王前顺",
-        "严文姬"
-      ]
-    },
-    {
-      "name": "重庆一部",
-      "orders": 2,
-      "people": [
-        "屈琪武",
-        "李国庆10"
-      ]
-    },
-    {
-      "name": "西安三部",
-      "orders": 1,
-      "people": [
-        "郭思涵"
-      ]
-    }
+    {"name": "西安一部", "people": [{"name": "刘东18", "group": "西安A团-刘晨辉"}, {"name": "杜屿06", "group": "西安E团-杨锋"}, {"name": "寇佳佳", "group": "西安E团-杨锋"}, {"name": "马菁菁05", "group": "西安L团-张乐成"}, {"name": "梅艳芳", "group": "西安L团-张乐成"}, {"name": "张晨阳06", "group": "西安L团-张乐成"}, {"name": "胡静24", "group": "西安A团-刘晨辉"}, {"name": "魏小霞01", "group": "西安A团-刘晨辉"}], "orders": 9},
+    {"name": "重庆二部", "people": [{"name": "曹杰09", "group": "重庆C团-陈琴"}, {"name": "冉雪萍02", "group": "重庆C团-陈琴"}, {"name": "周刚05", "group": "重庆D团-帅洁城"}, {"name": "刘骞49", "group": "重庆D团-帅洁城"}], "orders": 4},
+    {"name": "重庆三部", "people": [{"name": "王前顺", "group": "重庆H团-李航"}, {"name": "严文姬", "group": "重庆H团-李航"}, {"name": "向洪宇02", "group": "重庆H团-李航"}, {"name": "李家韦", "group": "重庆H团-李航"}], "orders": 4},
+    {"name": "成都一部", "people": [{"name": "金思慧", "group": "成都E团-苏琼瑶"}, {"name": "周江01", "group": "成都L团-李博"}, {"name": "杨倩28", "group": "成都X团-陈紫夷"}], "orders": 3},
+    {"name": "重庆一部", "people": [{"name": "屈琪武", "group": "重庆Y团-方阳威"}, {"name": "李国庆10", "group": "重庆Y团-方阳威"}, {"name": "况开林", "group": "重庆Y团-方阳威"}], "orders": 3},
+    {"name": "郑州二部", "people": [{"name": "郭晓坤", "group": "郑州直辖团"}, {"name": "权钲彬", "group": "郑州直辖团"}], "orders": 2},
+    {"name": "西安三部", "people": [{"name": "郭思涵", "group": "西安T团-王金辉"}], "orders": 1}
   ],
   "groups": [
-    {
-      "name": "西安L团-张乐成",
-      "orders": 3,
-      "branch": "西安一部"
-    },
-    {
-      "name": "西安E团-杨锋",
-      "orders": 2,
-      "branch": "西安一部"
-    },
-    {
-      "name": "郑州直辖团",
-      "orders": 2,
-      "branch": "郑州二部"
-    },
-    {
-      "name": "重庆C团-陈琴",
-      "orders": 2,
-      "branch": "重庆二部"
-    },
-    {
-      "name": "重庆H团-李航",
-      "orders": 2,
-      "branch": "重庆三部"
-    },
-    {
-      "name": "成都E团-苏琼瑶",
-      "orders": 1,
-      "branch": "成都一部"
-    },
-    {
-      "name": "成都L团-李博",
-      "orders": 1,
-      "branch": "成都一部"
-    },
-    {
-      "name": "成都X团-陈紫夷",
-      "orders": 1,
-      "branch": "成都一部"
-    },
-    {
-      "name": "西安A团-刘晨辉",
-      "orders": 1,
-      "branch": "西安一部"
-    },
-    {
-      "name": "重庆D团-帅洁城",
-      "orders": 1,
-      "branch": "重庆二部"
-    },
-    {
-      "name": "重庆Y团-方阳威",
-      "orders": 2,
-      "branch": "重庆一部"
-    },
-    {
-      "name": "西安T团-王金辉",
-      "orders": 1,
-      "branch": "西安三部"
-    }
+    {"name": "西安L团-张乐成", "branch": "西安一部", "orders": 4},
+    {"name": "重庆H团-李航", "branch": "重庆三部", "orders": 4},
+    {"name": "西安A团-刘晨辉", "branch": "西安一部", "orders": 3},
+    {"name": "重庆Y团-方阳威", "branch": "重庆一部", "orders": 3},
+    {"name": "西安E团-杨锋", "branch": "西安一部", "orders": 2},
+    {"name": "郑州直辖团", "branch": "郑州二部", "orders": 2},
+    {"name": "重庆C团-陈琴", "branch": "重庆二部", "orders": 2},
+    {"name": "重庆D团-帅洁城", "branch": "重庆二部", "orders": 2},
+    {"name": "成都E团-苏琼瑶", "branch": "成都一部", "orders": 1},
+    {"name": "成都L团-李博", "branch": "成都一部", "orders": 1},
+    {"name": "成都X团-陈紫夷", "branch": "成都一部", "orders": 1},
+    {"name": "西安T团-王金辉", "branch": "西安三部", "orders": 1}
   ],
   "people": [
-    {
-      "name": "金思慧",
-      "orders": 1,
-      "group": "成都E团-苏琼瑶",
-      "branch": "成都一部"
-    },
-    {
-      "name": "周江01",
-      "orders": 1,
-      "group": "成都L团-李博",
-      "branch": "成都一部"
-    },
-    {
-      "name": "杨倩28",
-      "orders": 1,
-      "group": "成都X团-陈紫夷",
-      "branch": "成都一部"
-    },
-    {
-      "name": "刘东18",
-      "orders": 1,
-      "group": "西安A团-刘晨辉",
-      "branch": "西安一部"
-    },
-    {
-      "name": "杜屿06",
-      "orders": 1,
-      "group": "西安E团-杨锋",
-      "branch": "西安一部"
-    },
-    {
-      "name": "寇佳佳",
-      "orders": 1,
-      "group": "西安E团-杨锋",
-      "branch": "西安一部"
-    },
-    {
-      "name": "马菁菁05",
-      "orders": 1,
-      "group": "西安L团-张乐成",
-      "branch": "西安一部"
-    },
-    {
-      "name": "梅艳芳",
-      "orders": 1,
-      "group": "西安L团-张乐成",
-      "branch": "西安一部"
-    },
-    {
-      "name": "张晨阳06",
-      "orders": 1,
-      "group": "西安L团-张乐成",
-      "branch": "西安一部"
-    },
-    {
-      "name": "郭晓坤",
-      "orders": 1,
-      "group": "郑州直辖团",
-      "branch": "郑州二部"
-    },
-    {
-      "name": "权钲彬",
-      "orders": 1,
-      "group": "郑州直辖团",
-      "branch": "郑州二部"
-    },
-    {
-      "name": "曹杰09",
-      "orders": 1,
-      "group": "重庆C团-陈琴",
-      "branch": "重庆二部"
-    },
-    {
-      "name": "冉雪萍02",
-      "orders": 1,
-      "group": "重庆C团-陈琴",
-      "branch": "重庆二部"
-    },
-    {
-      "name": "周刚05",
-      "orders": 1,
-      "group": "重庆D团-帅洁城",
-      "branch": "重庆二部"
-    },
-    {
-      "name": "王前顺",
-      "orders": 1,
-      "group": "重庆H团-李航",
-      "branch": "重庆三部"
-    },
-    {
-      "name": "严文姬",
-      "orders": 1,
-      "group": "重庆H团-李航",
-      "branch": "重庆三部"
-    },
-    {
-      "name": "屈琪武",
-      "orders": 1,
-      "group": "重庆Y团-方阳威",
-      "branch": "重庆一部"
-    },
-    {
-      "name": "李国庆10",
-      "orders": 1,
-      "group": "重庆Y团-方阳威",
-      "branch": "重庆一部"
-    },
-    {
-      "name": "郭思涵",
-      "orders": 1,
-      "group": "西安T团-王金辉",
-      "branch": "西安三部"
-    }
+    {"name": "金思慧", "branch": "成都一部", "group": "成都E团-苏琼瑶"},
+    {"name": "周江01", "branch": "成都一部", "group": "成都L团-李博"},
+    {"name": "杨倩28", "branch": "成都一部", "group": "成都X团-陈紫夷"},
+    {"name": "刘东18", "branch": "西安一部", "group": "西安A团-刘晨辉"},
+    {"name": "杜屿06", "branch": "西安一部", "group": "西安E团-杨锋"},
+    {"name": "寇佳佳", "branch": "西安一部", "group": "西安E团-杨锋"},
+    {"name": "马菁菁05", "branch": "西安一部", "group": "西安L团-张乐成"},
+    {"name": "梅艳芳", "branch": "西安一部", "group": "西安L团-张乐成"},
+    {"name": "张晨阳06", "branch": "西安一部", "group": "西安L团-张乐成"},
+    {"name": "胡静24", "branch": "西安一部", "group": "西安A团-刘晨辉"},
+    {"name": "魏小霞01", "branch": "西安一部", "group": "西安A团-刘晨辉"},
+    {"name": "郭晓坤", "branch": "郑州二部", "group": "郑州直辖团"},
+    {"name": "权钲彬", "branch": "郑州二部", "group": "郑州直辖团"},
+    {"name": "曹杰09", "branch": "重庆二部", "group": "重庆C团-陈琴"},
+    {"name": "冉雪萍02", "branch": "重庆二部", "group": "重庆C团-陈琴"},
+    {"name": "周刚05", "branch": "重庆二部", "group": "重庆D团-帅洁城"},
+    {"name": "刘骞49", "branch": "重庆二部", "group": "重庆D团-帅洁城"},
+    {"name": "王前顺", "branch": "重庆三部", "group": "重庆H团-李航"},
+    {"name": "严文姬", "branch": "重庆三部", "group": "重庆H团-李航"},
+    {"name": "向洪宇02", "branch": "重庆三部", "group": "重庆H团-李航"},
+    {"name": "李家韦", "branch": "重庆三部", "group": "重庆H团-李航"},
+    {"name": "屈琪武", "branch": "重庆一部", "group": "重庆Y团-方阳威"},
+    {"name": "李国庆10", "branch": "重庆一部", "group": "重庆Y团-方阳威"},
+    {"name": "况开林", "branch": "重庆一部", "group": "重庆Y团-方阳威"},
+    {"name": "郭思涵", "branch": "西安三部", "group": "西安T团-王金辉"}
   ]
 }
