@@ -1,12 +1,12 @@
 {
   "dateRange": "5月11日-8月1日",
-  "totalPeople": 26,
-  "totalOrders": 27,
+  "totalPeople": 27,
+  "totalOrders": 28,
   "championGroup": {
-    "name": "西安L团-张乐成",
-    "branch": "西安一部",
-    "people": ["马菁菁05", "梅艳芳", "张晨阳06"],
-    "orders": 4
+    "name": "重庆H团-李航",
+    "branch": "重庆三部",
+    "people": ["王前顺", "严文姬", "向洪宇02", "李家韦", "庞川森"],
+    "orders": 5
   },
   "championPerson": {
     "name": "马菁菁05",
@@ -17,16 +17,16 @@
   },
   "branches": [
     {"name": "西安一部", "people": ["刘东18", "杜屿06", "寇佳佳", "马菁菁05", "梅艳芳", "张晨阳06", "胡静24", "魏小霞01"], "orders": 9},
+    {"name": "重庆三部", "people": ["王前顺", "严文姬", "向洪宇02", "李家韦", "庞川森"], "orders": 5},
     {"name": "重庆二部", "people": ["曹杰09", "冉雪萍02", "周刚05", "刘骞49"], "orders": 4},
-    {"name": "重庆三部", "people": ["王前顺", "严文姬", "向洪宇02", "李家韦"], "orders": 4},
     {"name": "成都一部", "people": ["金思慧", "周江01", "杨倩28"], "orders": 3},
     {"name": "郑州二部", "people": ["郭晓坤", "权钲彬", "黄春凯"], "orders": 3},
     {"name": "重庆一部", "people": ["屈琪武", "李国庆10", "况开林"], "orders": 3},
     {"name": "西安三部", "people": ["郭思涵"], "orders": 1}
   ],
   "groups": [
+    {"name": "重庆H团-李航", "branch": "重庆三部", "orders": 5},
     {"name": "西安L团-张乐成", "branch": "西安一部", "orders": 4},
-    {"name": "重庆H团-李航", "branch": "重庆三部", "orders": 4},
     {"name": "西安A团-刘晨辉", "branch": "西安一部", "orders": 3},
     {"name": "郑州直辖团", "branch": "郑州二部", "orders": 3},
     {"name": "重庆Y团-方阳威", "branch": "重庆一部", "orders": 3},
@@ -64,6 +64,7 @@
     {"name": "胡静24", "branch": "西安一部", "group": "西安A团-刘晨辉"},
     {"name": "魏小霞01", "branch": "西安一部", "group": "西安A团-刘晨辉"},
     {"name": "李家韦", "branch": "重庆三部", "group": "重庆H团-李航"},
-    {"name": "黄春凯", "branch": "郑州二部", "group": "郑州直辖团"}
+    {"name": "黄春凯", "branch": "郑州二部", "group": "郑州直辖团"},
+    {"name": "庞川森", "branch": "重庆三部", "group": "重庆H团-李航"}
   ]
 }
