@@ -169,6 +169,11 @@
     .card .value.pink { color: #ec4899; text-shadow: 0 0 20px rgba(236, 72, 153, 0.3); }
     .card .sub { font-size: 11px; color: #4b5563; margin-top: 2px; }
 
+    /* Branch Cards - Unified */
+    .branch-name { font-size: 13px; font-weight: 700; color: #fff; letter-spacing: 1px; margin-bottom: 4px; }
+    .branch-num { font-size: 32px; font-weight: 900; color: #06b6d4; text-shadow: 0 0 20px rgba(6, 182, 212, 0.3); }
+    .branch-sub { font-size: 10px; color: #6b7280; margin-top: 2px; letter-spacing: 1px; }
+
     /* Three Column Leaderboards - Branch gets more space */
     .boards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .board {
@@ -411,15 +416,13 @@
 
       // 渲染分校卡片
       const branchCards = document.getElementById('branchCards');
-      const colors = ['cyan', 'gold', 'purple', 'pink', 'cyan', 'gold', 'purple'];
       [...data.branches].sort((a, b) => b.orders - a.orders).forEach((b, i) => {
         const card = document.createElement('div');
         card.className = 'card';
-        const color = colors[i % colors.length];
         card.innerHTML = `
-          <div class="label">${b.name}</div>
-          <div class="value ${color}">${b.orders}</div>
-          <div class="sub">${b.people.length}人出单</div>
+          <div class="branch-name">${b.name}</div>
+          <div class="branch-num">${b.orders}</div>
+          <div class="branch-sub">${b.people.length}人出单</div>
         `;
         branchCards.appendChild(card);
       });
