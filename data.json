@@ -1,7 +1,7 @@
 {
   "dateRange": "5月11日-8月1日",
-  "totalPeople": 31,
-  "totalOrders": 32,
+  "totalPeople": 34,
+  "totalOrders": 35,
   "championGroup": {
     "name": "重庆H团-李航",
     "branch": "重庆三部",
@@ -33,9 +33,10 @@
         "张晨阳06",
         "胡静24",
         "魏小霞01",
-        "郭婉莹"
+        "郭婉莹",
+        "鲁栋林01"
       ],
-      "orders": 10
+      "orders": 11
     },
     {
       "name": "重庆二部",
@@ -71,6 +72,16 @@
       "orders": 4
     },
     {
+      "name": "郑州二部",
+      "people": [
+        "郭晓坤",
+        "权钲彬",
+        "黄春凯",
+        "郭佳乐02"
+      ],
+      "orders": 4
+    },
+    {
       "name": "成都一部",
       "people": [
         "金思慧",
@@ -80,20 +91,12 @@
       "orders": 3
     },
     {
-      "name": "郑州二部",
-      "people": [
-        "郭晓坤",
-        "权钲彬",
-        "黄春凯"
-      ],
-      "orders": 3
-    },
-    {
       "name": "西安三部",
       "people": [
-        "郭思涵"
+        "郭思涵",
+        "屈颖洁"
       ],
-      "orders": 1
+      "orders": 2
     }
   ],
   "groups": [
@@ -105,7 +108,7 @@
     {
       "name": "西安A团-刘晨辉",
       "branch": "西安一部",
-      "orders": 4
+      "orders": 5
     },
     {
       "name": "西安L团-张乐成",
@@ -113,14 +116,14 @@
       "orders": 4
     },
     {
-      "name": "重庆Y团-方阳威",
-      "branch": "重庆一部",
+      "name": "郑州直辖团",
+      "branch": "郑州二部",
       "orders": 4
     },
     {
-      "name": "郑州直辖团",
-      "branch": "郑州二部",
-      "orders": 3
+      "name": "重庆Y团-方阳威",
+      "branch": "重庆一部",
+      "orders": 4
     },
     {
       "name": "重庆C团-陈琴",
@@ -138,6 +141,11 @@
       "orders": 2
     },
     {
+      "name": "西安T团-王金辉",
+      "branch": "西安三部",
+      "orders": 2
+    },
+    {
       "name": "成都E团-苏琼瑶",
       "branch": "成都一部",
       "orders": 1
@@ -150,11 +158,6 @@
     {
       "name": "成都X团-陈紫夷",
       "branch": "成都一部",
-      "orders": 1
-    },
-    {
-      "name": "西安T团-王金辉",
-      "branch": "西安三部",
       "orders": 1
     },
     {
@@ -316,6 +319,21 @@
     },
     {
       "name": "黄春凯",
+      "branch": "郑州二部",
+      "group": "郑州直辖团"
+    },
+    {
+      "name": "鲁栋林01",
+      "branch": "西安一部",
+      "group": "西安A团-刘晨辉"
+    },
+    {
+      "name": "屈颖洁",
+      "branch": "西安三部",
+      "group": "西安T团-王金辉"
+    },
+    {
+      "name": "郭佳乐02",
       "branch": "郑州二部",
       "group": "郑州直辖团"
     }
