@@ -132,6 +132,7 @@
       box-shadow: 0 0 30px rgba(168, 85, 247, 0.4), inset 0 0 20px rgba(255,255,255,0.2);
     }
     .hero-info h3 { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 3px; }
+    .hero-info h3.multi { font-size: 16px; line-height: 1.3; }
     .hero-info .sub { font-size: 12px; color: #9ca3af; }
     .hero-info .sub span { font-weight: 700; }
     .hero-stats { display: flex; gap: 20px; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06); }
@@ -435,12 +436,25 @@
         document.getElementById('cgPeople').textContent = cg.people.length;
       }
 
-      if (data.championPerson) {
-        const cp = data.championPerson;
-        document.getElementById('championPersonName').textContent = cp.name;
-        document.getElementById('championPersonSub').innerHTML = `<span>${cp.branch}</span> · ${cp.group}`;
-        document.getElementById('cpOrders').textContent = cp.orders;
-        document.getElementById('cpRank').textContent = '#' + (cp.rank || 1);
+      if (data.championPeople && data.championPeople.length > 0) {
+        const cpList = data.championPeople;
+        const first = cpList[0];
+        
+        if (cpList.length === 1) {
+          // 单人冠军
+          document.getElementById('championPersonName').textContent = first.name;
+          document.getElementById('championPersonName').className = '';
+          document.getElementById('championPersonSub').innerHTML = `<span>${first.branch}</span> · ${first.group}`;
+        } else {
+          // 并列冠军 - 显示名字列表
+          const names = cpList.map(p => p.name).join('、');
+          document.getElementById('championPersonName').textContent = names;
+          document.getElementById('championPersonName').className = 'multi';
+          document.getElementById('championPersonSub').innerHTML = `<span>${first.branch}</span> · 并列第1`;
+        }
+        
+        document.getElementById('cpOrders').textContent = first.orders;
+        document.getElementById('cpRank').textContent = cpList.length > 1 ? '并列#1' : '#1';
       }
 
       const gMax = Math.max(...activeGroups.map(g => g.orders));
