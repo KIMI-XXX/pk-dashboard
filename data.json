@@ -1,7 +1,7 @@
 {
-  "dateRange": "5月11日-06月14日",
-  "totalPeople": 55,
-  "totalOrders": 59,
+  "dateRange": "5月11日-06月17日",
+  "totalPeople": 57,
+  "totalOrders": 61,
   "championGroup": {
     "name": "西安A团-刘晨辉",
     "branch": "西安一部",
@@ -82,9 +82,10 @@
         "李聪20",
         "黄鑫32",
         "冉雪萍02",
-        "龙燕芬"
+        "龙燕芬",
+        "陶剑01"
       ],
-      "orders": 10
+      "orders": 11
     },
     {
       "name": "成都一部",
@@ -120,9 +121,10 @@
         "黄春凯",
         "郭佳乐02",
         "马宇昂",
-        "李佑斌"
+        "李佑斌",
+        "宋鉴楳01"
       ],
-      "orders": 6
+      "orders": 7
     },
     {
       "name": "重庆三部",
@@ -154,13 +156,13 @@
       "orders": 10
     },
     {
-      "name": "西安L团-张乐成",
-      "branch": "西安一部",
-      "orders": 6
-    },
-    {
       "name": "郑州直辖团",
       "branch": "郑州二部",
+      "orders": 7
+    },
+    {
+      "name": "西安L团-张乐成",
+      "branch": "西安一部",
       "orders": 6
     },
     {
@@ -196,7 +198,7 @@
     {
       "name": "重庆D团-帅洁城",
       "branch": "重庆二部",
-      "orders": 3
+      "orders": 4
     },
     {
       "name": "成都L团-李博",
@@ -526,6 +528,12 @@
       "orders": 1
     },
     {
+      "name": "陶剑01",
+      "branch": "重庆二部",
+      "group": "重庆D团-帅洁城",
+      "orders": 1
+    },
+    {
       "name": "卢瑶11",
       "branch": "成都一部",
       "group": "成都L团-李博",
@@ -553,6 +561,12 @@
       "name": "李志豪15",
       "branch": "西安一部",
       "group": "西安A团-刘晨辉",
+      "orders": 1
+    },
+    {
+      "name": "宋鉴楳01",
+      "branch": "郑州二部",
+      "group": "郑州直辖团",
       "orders": 1
     }
   ]
