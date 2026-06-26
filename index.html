@@ -15,7 +15,6 @@
       position: relative;
       overflow-x: hidden;
     }
-    /* Animated grid background - brighter */
     body::before {
       content: '';
       position: fixed; top: 0; left: 0; right: 0; bottom: 0;
@@ -26,7 +25,6 @@
       pointer-events: none;
       z-index: 0;
     }
-    /* Floating orbs - brighter and more visible */
     .orb {
       position: fixed; border-radius: 50%;
       filter: blur(60px); pointer-events: none; z-index: 0;
@@ -44,7 +42,6 @@
 
     .container { max-width: 1400px; margin: 0 auto; padding: 20px; position: relative; z-index: 1; }
 
-    /* Header with neon glow */
     .header { text-align: center; margin-bottom: 24px; padding: 16px 0; position: relative; }
     .header::after {
       content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
@@ -74,7 +71,6 @@
       50% { box-shadow: 0 0 25px rgba(6, 182, 212, 0.4); }
     }
 
-    /* Hero Section with glassmorphism */
     .hero-section { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px; }
     .hero-card {
       border-radius: 16px; padding: 24px; position: relative; overflow: hidden;
@@ -143,7 +139,6 @@
     .hero-purple .hero-stat .num { color: #a855f7; text-shadow: 0 0 10px rgba(168, 85, 247, 0.3); }
     .hero-stat .txt { font-size: 10px; color: #6b7280; letter-spacing: 1px; margin-top: 2px; }
 
-    /* Branch Cards - Neon */
     .overview { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 20px; }
     .card {
       background: linear-gradient(135deg, rgba(30, 41, 59, 0.4), rgba(15, 23, 42, 0.6));
@@ -164,18 +159,12 @@
     }
     .card .label { font-size: 10px; color: #6b7280; letter-spacing: 1px; margin-bottom: 6px; }
     .card .value { font-size: 32px; font-weight: 900; color: #fff; }
-    .card .value.gold { color: #fbbf24; text-shadow: 0 0 20px rgba(251, 191, 36, 0.3); }
-    .card .value.cyan { color: #06b6d4; text-shadow: 0 0 20px rgba(6, 182, 212, 0.3); }
-    .card .value.purple { color: #a855f7; text-shadow: 0 0 20px rgba(168, 85, 247, 0.3); }
-    .card .value.pink { color: #ec4899; text-shadow: 0 0 20px rgba(236, 72, 153, 0.3); }
     .card .sub { font-size: 11px; color: #4b5563; margin-top: 2px; }
 
-    /* Branch Cards - Unified */
     .branch-name { font-size: 13px; font-weight: 700; color: #fff; letter-spacing: 1px; margin-bottom: 4px; }
     .branch-num { font-size: 32px; font-weight: 900; color: #06b6d4; text-shadow: 0 0 20px rgba(6, 182, 212, 0.3); }
     .branch-sub { font-size: 10px; color: #6b7280; margin-top: 2px; letter-spacing: 1px; }
 
-    /* Three Column Leaderboards - Branch gets more space */
     .boards-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; }
     .board {
       background: linear-gradient(135deg, rgba(30, 41, 59, 0.3), rgba(15, 23, 42, 0.5));
@@ -266,7 +255,6 @@
     .rank-score { font-size: 18px; font-weight: 800; color: #fbbf24; min-width: 36px; text-align: right; }
     .rank-score .unit { font-size: 10px; color: #6b7280; font-weight: 400; margin-left: 2px; }
 
-    /* People board - neon chips */
     .people-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
     .person-chip {
       display: flex; align-items: center; gap: 8px;
@@ -290,7 +278,6 @@
     .person-chip .p-name { font-weight: 600; color: #f8fafc; }
     .person-chip .p-sub { font-size: 10px; color: #6b7280; margin-left: auto; }
 
-    /* Responsive */
     @media (max-width: 1100px) {
       .boards-grid { grid-template-columns: 1fr; }
       .hero-section { grid-template-columns: repeat(2, 1fr); }
@@ -316,7 +303,6 @@
   <div class="orb orb-4"></div>
 
   <div class="container">
-    <!-- Header -->
     <div class="header">
       <div class="subtitle">GROUP PK ARENA</div>
       <h1>菁英班榜上有名</h1>
@@ -324,7 +310,6 @@
       <div class="status">LIVE</div>
     </div>
 
-    <!-- Hero Section -->
     <div class="hero-section">
       <div class="hero-card hero-gold">
         <div class="hero-badge">🏆 领跑军团</div>
@@ -376,18 +361,14 @@
       </div>
     </div>
 
-    <!-- Branch Cards -->
     <div class="overview" id="branchCards"></div>
 
-    <!-- Two Boards -->
     <div class="boards-grid">
-      <!-- Group Board -->
       <div class="board board-gold">
         <div class="board-header"><h2>⚔️ 军团排行榜</h2><div class="tag">按菁英班个数</div></div>
         <div id="groupList"></div>
       </div>
 
-      <!-- Person Board -->
       <div class="board board-purple">
         <div class="board-header"><h2>👑 菁英勇士</h2><div class="tag">已出单勇士</div></div>
         <div id="personList"></div>
@@ -405,62 +386,64 @@
     }
 
     function render(data) {
-      const activeBranches = data.branches || [];
-      const activeGroups = data.groups || [];
-
       // 更新出单勇士卡片
       document.getElementById('heroPeople').textContent = data.totalPeople + '人';
       document.getElementById('heroSubDesc').innerHTML = data.totalPeople + '位lpc伙伴已破零，每人 <span>1单</span>';
       document.getElementById('heroTotalPeople').textContent = data.totalPeople;
       document.getElementById('heroTotalOrders').textContent = data.totalOrders;
-      document.getElementById('heroBranchCount').textContent = activeBranches.length;
+      document.getElementById('heroBranchCount').textContent = (data.branches || []).length;
 
       // 渲染分校卡片
       const branchCards = document.getElementById('branchCards');
-      [...data.branches].sort((a, b) => b.orders - a.orders).forEach((b, i) => {
+      branchCards.innerHTML = '';
+      const activeBranches = [...(data.branches || [])].filter(b => b.orders > 0).sort((a, b) => b.orders - a.orders);
+      activeBranches.forEach((b, i) => {
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
           <div class="branch-name">${b.name}</div>
           <div class="branch-num">${b.orders}</div>
-          <div class="branch-sub">${b.people.length}人出单</div>
+          <div class="branch-sub">${b.people}人出单</div>
         `;
         branchCards.appendChild(card);
       });
 
-      if (data.championGroup) {
-        const cg = data.championGroup;
+      // 冠军军团 - 从 teams 取第一
+      const activeTeams = [...(data.teams || [])].filter(t => t.orders > 0).sort((a, b) => b.orders - a.orders);
+      if (activeTeams.length > 0) {
+        const cg = activeTeams[0];
+        // 找出该团队的人
+        const teamPeople = (data.people || []).filter(p => p.team === cg.name);
+        const peopleNames = teamPeople.map(p => p.name).join('、');
         document.getElementById('championGroupName').textContent = cg.name;
-        document.getElementById('championGroupSub').innerHTML = `<span>${cg.branch}</span> · ${cg.people.join('、')}`;
+        document.getElementById('championGroupSub').innerHTML = `<span>${cg.name.includes('西安') ? '西安一部' : cg.name.includes('郑州') ? '郑州二部' : cg.name.includes('重庆') ? (cg.name.includes('二部') ? '重庆二部' : cg.name.includes('三部') ? '重庆三部' : '重庆一部') : '未知'}</span> · ${peopleNames || cg.name}`;
         document.getElementById('cgOrders').textContent = cg.orders;
-        document.getElementById('cgPeople').textContent = cg.people.length;
+        document.getElementById('cgPeople').textContent = cg.people;
       }
 
-      if (data.championPeople && data.championPeople.length > 0) {
-        const cpList = data.championPeople;
-        const first = cpList[0];
-        
-        if (cpList.length === 1) {
-          // 单人冠军
+      // 冠军之星 - 从 stars 取
+      const stars = data.stars || [];
+      if (stars.length > 0) {
+        const first = stars[0];
+        if (stars.length === 1) {
           document.getElementById('championPersonName').textContent = first.name;
           document.getElementById('championPersonName').className = '';
-          document.getElementById('championPersonSub').innerHTML = `<span>${first.branch}</span> · ${first.group}`;
+          document.getElementById('championPersonSub').innerHTML = `<span>${first.team}</span> · ${first.orders}单`;
         } else {
-          // 并列冠军 - 显示名字列表
-          const names = cpList.map(p => p.name).join('、');
+          const names = stars.map(s => s.name).join('、');
           document.getElementById('championPersonName').textContent = names;
           document.getElementById('championPersonName').className = 'multi';
-          document.getElementById('championPersonSub').innerHTML = `<span>${first.branch}</span> · 并列第1`;
+          document.getElementById('championPersonSub').innerHTML = `<span>${first.team}</span> · 并列${first.orders}单`;
         }
-        
         document.getElementById('cpOrders').textContent = first.orders;
-        document.getElementById('cpRank').textContent = cpList.length > 1 ? '并列#1' : '#1';
+        document.getElementById('cpRank').textContent = stars.length > 1 ? '并列#1' : '#1';
       }
 
-      const gMax = Math.max(...activeGroups.map(g => g.orders));
+      // 军团排行榜
+      const gMax = activeTeams.length > 0 ? Math.max(...activeTeams.map(g => g.orders)) : 1;
       const groupList = document.getElementById('groupList');
-      [...data.groups].sort((a, b) => b.orders - a.orders).forEach((g, i) => {
-        if (g.orders === 0) return;
+      groupList.innerHTML = '';
+      activeTeams.forEach((g, i) => {
         const rank = i + 1;
         const topClass = rank <= 3 ? `top-${rank}` : '';
         const rnClass = rank === 1 ? 'rn-1' : rank === 2 ? 'rn-2' : rank === 3 ? 'rn-3' : 'rn-other';
@@ -470,16 +453,18 @@
         div.className = `rank-item ${topClass}`;
         div.innerHTML = `
           <div class="rank-num ${rnClass}">${rank}</div>
-          <div class="rank-info"><div class="name">${g.name}</div><div class="sub">${g.branch}</div></div>
+          <div class="rank-info"><div class="name">${g.name}</div><div class="sub">${g.people}人出单</div></div>
           <div class="rank-bar-wrap"><div class="rank-bar ${barClass}" style="width:${pct}%"></div></div>
           <div class="rank-score">${g.orders}<span class="unit">单</span></div>
         `;
         groupList.appendChild(div);
       });
 
+      // 菁英勇士 - 按分校分组
       const personList = document.getElementById('personList');
+      personList.innerHTML = '';
       const byBranch = {};
-      data.people.forEach(p => {
+      (data.people || []).forEach(p => {
         if (!byBranch[p.branch]) byBranch[p.branch] = [];
         byBranch[p.branch].push(p);
       });
@@ -497,7 +482,7 @@
         people.forEach(p => {
           const chip = document.createElement('div');
           chip.className = 'person-chip';
-          chip.innerHTML = `<div class="dot"></div><span class="p-name">${p.name}</span><span class="p-sub">${p.group.split('-')[0]}</span>`;
+          chip.innerHTML = `<div class="dot"></div><span class="p-name">${p.name}</span><span class="p-sub">${p.team ? p.team.split('-')[0] : ''}</span>`;
           grid.appendChild(chip);
         });
         groupDiv.appendChild(grid);
