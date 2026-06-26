@@ -421,22 +421,17 @@
         document.getElementById('cgPeople').textContent = cg.people;
       }
 
-      // 冠军之星 - 从 stars 取
+      // 冠军之星 - 只显示最多的那一个
       const stars = data.stars || [];
       if (stars.length > 0) {
-        const first = stars[0];
-        if (stars.length === 1) {
-          document.getElementById('championPersonName').textContent = first.name;
-          document.getElementById('championPersonName').className = '';
-          document.getElementById('championPersonSub').innerHTML = `<span>${first.team}</span> · ${first.orders}单`;
-        } else {
-          const names = stars.map(s => s.name).join('、');
-          document.getElementById('championPersonName').textContent = names;
-          document.getElementById('championPersonName').className = 'multi';
-          document.getElementById('championPersonSub').innerHTML = `<span>${first.team}</span> · 并列${first.orders}单`;
-        }
+        // 按单数降序，取第一个（最多的那一个）
+        const sortedStars = [...stars].sort((a, b) => b.orders - a.orders);
+        const first = sortedStars[0];
+        document.getElementById('championPersonName').textContent = first.name;
+        document.getElementById('championPersonName').className = '';
+        document.getElementById('championPersonSub').innerHTML = `<span>${first.team}</span> · ${first.orders}单`;
         document.getElementById('cpOrders').textContent = first.orders;
-        document.getElementById('cpRank').textContent = stars.length > 1 ? '并列#1' : '#1';
+        document.getElementById('cpRank').textContent = '#1';
       }
 
       // 军团排行榜
