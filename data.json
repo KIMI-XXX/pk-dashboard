@@ -1,7 +1,7 @@
 {
-  "updateTime": "2026-06-29",
-  "totalPeople": 86,
-  "totalOrders": 99,
+  "updateTime": "2026-06-30",
+  "totalPeople": 85,
+  "totalOrders": 98,
   "championGroup": {
     "name": "西安A团-刘晨辉",
     "branch": "西安一部",
@@ -16,7 +16,7 @@
   },
   "branches": [
     {"name": "西安一部", "orders": 28, "people": 23},
-    {"name": "重庆二部", "orders": 19, "people": 16},
+    {"name": "重庆二部", "orders": 18, "people": 15},
     {"name": "重庆一部", "orders": 15, "people": 14},
     {"name": "郑州二部", "orders": 11, "people": 9},
     {"name": "成都一部", "orders": 9, "people": 9},
@@ -28,17 +28,17 @@
     {"name": "重庆Y团-方阳威", "branch": "重庆一部", "orders": 14, "people": 13},
     {"name": "郑州直辖团", "branch": "郑州二部", "orders": 11, "people": 9},
     {"name": "重庆C团-陈琴", "branch": "重庆二部", "orders": 9, "people": 7},
-    {"name": "重庆D团-帅洁城", "branch": "重庆二部", "orders": 9, "people": 8},
     {"name": "重庆H团-李航", "branch": "重庆三部", "orders": 9, "people": 7},
+    {"name": "重庆D团-帅洁城", "branch": "重庆二部", "orders": 8, "people": 7},
     {"name": "西安L团-张乐成", "branch": "西安一部", "orders": 7, "people": 5},
     {"name": "西安E团-杨锋", "branch": "西安一部", "orders": 6, "people": 6},
     {"name": "西安T团-王金辉", "branch": "西安三部", "orders": 6, "people": 6},
     {"name": "成都L团-李博", "branch": "成都一部", "orders": 4, "people": 4},
     {"name": "成都E团-苏琼瑶", "branch": "成都一部", "orders": 3, "people": 3},
-    {"name": "西安B团-包乃梅", "branch": "西安三部", "orders": 1, "people": 1},
-    {"name": "重庆A团-廖艺璇", "branch": "重庆一部", "orders": 1, "people": 1},
+    {"name": "成都X团-陈紫夷", "branch": "成都一部", "orders": 2, "people": 2},
+    {"name": "西安B团-包乃梅", "branch": "西安三部", "orders": 2, "people": 2},
     {"name": "重庆L团-李太萍", "branch": "重庆二部", "orders": 1, "people": 1},
-    {"name": "成都X团-陈紫夷", "branch": "成都一部", "orders": 2, "people": 2}
+    {"name": "重庆A团-廖艺璇", "branch": "重庆一部", "orders": 1, "people": 1}
   ],
   "stars": [
     {"name": "冉雪萍02", "team": "重庆C团-陈琴", "orders": 3},
@@ -138,7 +138,6 @@
     {"name": "韩佳宏", "branch": "重庆一部", "team": "重庆Y团-方阳威", "orders": 1},
     {"name": "高鹏焱", "branch": "成都一部", "team": "成都L团-李博", "orders": 1},
     {"name": "杨利38", "branch": "重庆二部", "team": "重庆D团-帅洁城", "orders": 1},
-    {"name": "张书培02", "branch": "重庆二部", "team": "重庆D团-帅洁城", "orders": 1},
     {"name": "刘溢47", "branch": "重庆二部", "team": "重庆D团-帅洁城", "orders": 1}
   ]
 }
