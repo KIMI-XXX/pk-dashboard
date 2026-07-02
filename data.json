@@ -1,12 +1,12 @@
 {
-  "updateTime": "2026-07-01",
-  "totalPeople": 87,
-  "totalOrders": 100,
+  "updateTime": "2026-07-02",
+  "totalPeople": 88,
+  "totalOrders": 103,
   "branches": [
     {
       "name": "西安一部",
-      "people": 25,
-      "orders": 30
+      "people": 26,
+      "orders": 33
     },
     {
       "name": "重庆二部",
@@ -56,6 +56,16 @@
       "orders": 11
     },
     {
+      "name": "西安E团-杨锋",
+      "people": 7,
+      "orders": 9
+    },
+    {
+      "name": "西安L团-张乐成",
+      "people": 7,
+      "orders": 9
+    },
+    {
       "name": "重庆C团-陈琴",
       "people": 7,
       "orders": 9
@@ -66,19 +76,9 @@
       "orders": 9
     },
     {
-      "name": "西安L团-张乐成",
-      "people": 6,
-      "orders": 8
-    },
-    {
       "name": "重庆D团-帅洁城",
       "people": 7,
       "orders": 8
-    },
-    {
-      "name": "西安E团-杨锋",
-      "people": 7,
-      "orders": 7
     },
     {
       "name": "西安T团-王金辉",
@@ -145,7 +145,7 @@
       "name": "杜屿06",
       "branch": "西安一部",
       "team": "西安E团-杨锋",
-      "count": 1
+      "count": 2
     },
     {
       "name": "寇佳佳",
@@ -637,6 +637,12 @@
       "name": "寇媛媛",
       "branch": "西安一部",
       "team": "西安E团-杨锋",
+      "count": 2
+    },
+    {
+      "name": "温彩琴",
+      "branch": "西安一部",
+      "team": "西安L团-张乐成",
       "count": 1
     }
   ],
@@ -651,6 +657,12 @@
       "name": "刘东18",
       "branch": "西安一部",
       "team": "西安A团-刘晨辉",
+      "count": 2
+    },
+    {
+      "name": "杜屿06",
+      "branch": "西安一部",
+      "team": "西安E团-杨锋",
       "count": 2
     },
     {
@@ -711,6 +723,12 @@
       "name": "安珂02",
       "branch": "郑州二部",
       "team": "郑州直辖团",
+      "count": 2
+    },
+    {
+      "name": "寇媛媛",
+      "branch": "西安一部",
+      "team": "西安E团-杨锋",
       "count": 2
     }
   ],
