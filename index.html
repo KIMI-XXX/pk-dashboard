@@ -346,17 +346,13 @@
 
       <div class="hero-card hero-purple">
         <div class="hero-badge">👑 菁英班之星</div>
-        <div class="hero-label">CHAMPION STAR</div>
-        <div class="hero-body">
-          <div class="hero-avatar" style="font-size:18px;">1st</div>
-          <div class="hero-info">
-            <h3 id="championPersonName">--</h3>
-            <div class="sub" id="championPersonSub">--</div>
-          </div>
+        <div class="hero-label">CHAMPION STARS</div>
+        <div id="championPersonContainer" style="padding:8px 0;max-height:200px;overflow-y:auto;">
+          <!-- JS 动态填充 -->
         </div>
         <div class="hero-stats">
-          <div class="hero-stat"><div class="num" style="color:#a855f7;" id="cpOrders">0</div><div class="txt">出单</div></div>
-          <div class="hero-stat"><div class="num" style="color:#a855f7;" id="cpRank">#1</div><div class="txt">排名</div></div>
+          <div class="hero-stat"><div class="num" style="color:#a855f7;" id="cpOrders">3+</div><div class="txt">出单门槛</div></div>
+          <div class="hero-stat"><div class="num" style="color:#a855f7;" id="cpRank">6人</div><div class="txt">菁英人数</div></div>
         </div>
       </div>
     </div>
@@ -421,16 +417,30 @@
         document.getElementById('cgPeople').textContent = cg.people;
       }
 
-      // 冠军之星 - 只显示最多的那一个
+      // 冠军之星 - 显示所有3单及以上的个人
+      const topStars = data.topStars || [];
+      const cpContainer = document.getElementById('championPersonContainer');
+      if (topStars.length > 0 && cpContainer) {
+        cpContainer.innerHTML = topStars.map((star, idx) => `
+          <div class="star-item" style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+            <div class="hero-avatar" style="font-size:14px;width:32px;height:32px;">${idx+1}</div>
+            <div style="flex:1;">
+              <div style="font-size:14px;font-weight:600;">${star.name}</div>
+              <div style="font-size:11px;opacity:0.7;">${star.team} · ${star.count}单</div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // 保留原有兼容逻辑（如果没有topStars则显示原来的单个人）
       const stars = data.stars || [];
-      if (stars.length > 0) {
-        // 按单数降序，取第一个（最多的那一个）
-        const sortedStars = [...stars].sort((a, b) => b.orders - a.orders);
+      if (stars.length > 0 && topStars.length === 0) {
+        const sortedStars = [...stars].sort((a, b) => b.count - a.count);
         const first = sortedStars[0];
         document.getElementById('championPersonName').textContent = first.name;
         document.getElementById('championPersonName').className = '';
-        document.getElementById('championPersonSub').innerHTML = `<span>${first.team}</span> · ${first.orders}单`;
-        document.getElementById('cpOrders').textContent = first.orders;
+        document.getElementById('championPersonSub').innerHTML = `<span>${first.team}</span> · ${first.count}单`;
+        document.getElementById('cpOrders').textContent = first.count;
         document.getElementById('cpRank').textContent = '#1';
       }
 

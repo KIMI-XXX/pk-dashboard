@@ -968,5 +968,43 @@
     "branch": "重庆一部",
     "people": 17,
     "orders": 23
-  }
+  },
+  "topStars": [
+    {
+      "name": "马宇昂",
+      "branch": "郑州二部",
+      "team": "郑州直辖团",
+      "count": 3
+    },
+    {
+      "name": "曹杰09",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 3
+    },
+    {
+      "name": "冉雪萍02",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 3
+    },
+    {
+      "name": "庞川森",
+      "branch": "重庆三部",
+      "team": "重庆H团-李航",
+      "count": 3
+    },
+    {
+      "name": "向洪宇02",
+      "branch": "重庆三部",
+      "team": "重庆H团-李航",
+      "count": 3
+    },
+    {
+      "name": "周泓豆",
+      "branch": "重庆一部",
+      "team": "重庆Y团-方阳威",
+      "count": 3
+    }
+  ]
 }
