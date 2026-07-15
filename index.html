@@ -139,7 +139,7 @@
     .hero-purple .hero-stat .num { color: #a855f7; text-shadow: 0 0 10px rgba(168, 85, 247, 0.3); }
     .hero-stat .txt { font-size: 10px; color: #6b7280; letter-spacing: 1px; margin-top: 2px; }
 
-    .overview { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 20px; }
+    .overview { display: grid; grid-template-columns: repeat(8, 1fr); gap: 10px; margin-bottom: 20px; }
     .card {
       background: linear-gradient(135deg, rgba(30, 41, 59, 0.4), rgba(15, 23, 42, 0.6));
       border: 1px solid rgba(51, 65, 85, 0.3); border-radius: 12px;
@@ -426,7 +426,6 @@
             <div class="hero-avatar" style="font-size:14px;width:32px;height:32px;">${idx+1}</div>
             <div style="flex:1;">
               <div style="font-size:14px;font-weight:600;">${star.name}</div>
-              <div style="font-size:11px;opacity:0.7;">${star.team} · ${star.count}单</div>
             </div>
           </div>
         `).join('');
