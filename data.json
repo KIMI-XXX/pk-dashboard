@@ -24,23 +24,23 @@
       "orders": 16
     },
     {
-      "name": "西安三部",
-      "people": 12,
-      "orders": 13
-    },
-    {
       "name": "郑州二部",
       "people": 11,
       "orders": 14
     },
     {
-      "name": "成都一部",
-      "people": 11,
-      "orders": 12
+      "name": "西安三部",
+      "people": 12,
+      "orders": 13
     },
     {
       "name": "重庆三部",
       "people": 7,
+      "orders": 12
+    },
+    {
+      "name": "成都一部",
+      "people": 11,
       "orders": 12
     }
   ],
@@ -64,22 +64,22 @@
       "orders": 17
     },
     {
-      "name": "郑州直辖团",
-      "branch": "郑州二部",
-      "people": 11,
-      "orders": 14
-    },
-    {
       "name": "重庆C团-陈琴",
       "branch": "重庆二部",
       "people": 10,
       "orders": 15
     },
     {
-      "name": "西安T团-王金辉",
-      "branch": "西安三部",
-      "people": 10,
-      "orders": 11
+      "name": "郑州直辖团",
+      "branch": "郑州二部",
+      "people": 11,
+      "orders": 14
+    },
+    {
+      "name": "重庆H团-李航",
+      "branch": "重庆三部",
+      "people": 7,
+      "orders": 12
     },
     {
       "name": "西安E团-杨锋",
@@ -88,10 +88,10 @@
       "orders": 12
     },
     {
-      "name": "重庆H团-李航",
-      "branch": "重庆三部",
-      "people": 7,
-      "orders": 12
+      "name": "西安T团-王金辉",
+      "branch": "西安三部",
+      "people": 10,
+      "orders": 11
     },
     {
       "name": "成都L团-李博",
