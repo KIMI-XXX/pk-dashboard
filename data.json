@@ -1,12 +1,12 @@
 {
-  "updateTime": "2026-07-13",
-  "totalPeople": 109,
-  "totalOrders": 141,
+  "updateTime": "2026-07-15",
+  "totalPeople": 126,
+  "totalOrders": 163,
   "branches": [
     {
       "name": "西安一部",
-      "people": 32,
-      "orders": 44
+      "people": 34,
+      "orders": 46
     },
     {
       "name": "重庆一部",
@@ -15,8 +15,18 @@
     },
     {
       "name": "重庆二部",
-      "people": 18,
-      "orders": 23
+      "people": 19,
+      "orders": 25
+    },
+    {
+      "name": "西安二部",
+      "people": 13,
+      "orders": 16
+    },
+    {
+      "name": "西安三部",
+      "people": 12,
+      "orders": 13
     },
     {
       "name": "郑州二部",
@@ -24,7 +34,7 @@
       "orders": 14
     },
     {
-      "name": "西安三部",
+      "name": "成都一部",
       "people": 11,
       "orders": 12
     },
@@ -32,19 +42,14 @@
       "name": "重庆三部",
       "people": 7,
       "orders": 12
-    },
-    {
-      "name": "成都一部",
-      "people": 11,
-      "orders": 11
     }
   ],
   "teams": [
     {
       "name": "重庆Y团-方阳威",
       "branch": "重庆一部",
-      "people": 17,
-      "orders": 23
+      "people": 16,
+      "orders": 22
     },
     {
       "name": "西安A团-刘晨辉",
@@ -55,8 +60,8 @@
     {
       "name": "西安L团-张乐成",
       "branch": "西安一部",
-      "people": 10,
-      "orders": 15
+      "people": 12,
+      "orders": 17
     },
     {
       "name": "郑州直辖团",
@@ -67,8 +72,14 @@
     {
       "name": "重庆C团-陈琴",
       "branch": "重庆二部",
-      "people": 9,
-      "orders": 13
+      "people": 10,
+      "orders": 15
+    },
+    {
+      "name": "西安T团-王金辉",
+      "branch": "西安三部",
+      "people": 10,
+      "orders": 11
     },
     {
       "name": "西安E团-杨锋",
@@ -83,10 +94,10 @@
       "orders": 12
     },
     {
-      "name": "西安T团-王金辉",
-      "branch": "西安三部",
-      "people": 9,
-      "orders": 10
+      "name": "成都L团-李博",
+      "branch": "成都一部",
+      "people": 7,
+      "orders": 8
     },
     {
       "name": "重庆D团-帅洁城",
@@ -95,10 +106,22 @@
       "orders": 8
     },
     {
-      "name": "成都L团-李博",
-      "branch": "成都一部",
-      "people": 7,
-      "orders": 7
+      "name": "西安Y团-秦浩南",
+      "branch": "西安二部",
+      "people": 5,
+      "orders": 6
+    },
+    {
+      "name": "西安T团-宋博涛",
+      "branch": "西安二部",
+      "people": 4,
+      "orders": 5
+    },
+    {
+      "name": "西安M团-周盟",
+      "branch": "西安二部",
+      "people": 3,
+      "orders": 4
     },
     {
       "name": "成都E团-苏琼瑶",
@@ -119,6 +142,24 @@
       "orders": 2
     },
     {
+      "name": "重庆A团-廖艺璇",
+      "branch": "重庆一部",
+      "people": 2,
+      "orders": 2
+    },
+    {
+      "name": "西安L团-李雨璐",
+      "branch": "西安二部",
+      "people": 1,
+      "orders": 1
+    },
+    {
+      "name": "重庆T团-陶义",
+      "branch": "重庆一部",
+      "people": 1,
+      "orders": 1
+    },
+    {
       "name": "重庆K团-纵晨",
       "branch": "重庆二部",
       "people": 1,
@@ -127,18 +168,6 @@
     {
       "name": "重庆L团-李太萍",
       "branch": "重庆二部",
-      "people": 1,
-      "orders": 1
-    },
-    {
-      "name": "重庆A团-廖艺璇",
-      "branch": "重庆一部",
-      "people": 1,
-      "orders": 1
-    },
-    {
-      "name": "重庆T团-陶义",
-      "branch": "重庆一部",
       "people": 1,
       "orders": 1
     }
@@ -151,21 +180,9 @@
       "count": 3
     },
     {
-      "name": "曹杰09",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 3
-    },
-    {
-      "name": "冉雪萍02",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 3
-    },
-    {
-      "name": "庞川森",
-      "branch": "重庆三部",
-      "team": "重庆H团-李航",
+      "name": "周泓豆",
+      "branch": "重庆一部",
+      "team": "重庆Y团-方阳威",
       "count": 3
     },
     {
@@ -175,21 +192,27 @@
       "count": 3
     },
     {
-      "name": "周泓豆",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
+      "name": "庞川森",
+      "branch": "重庆三部",
+      "team": "重庆H团-李航",
       "count": 3
     },
     {
-      "name": "刘金玲01",
-      "branch": "西安三部",
-      "team": "西安T团-王金辉",
-      "count": 2
+      "name": "冉雪萍02",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 3
     },
     {
-      "name": "胡静24",
-      "branch": "西安一部",
-      "team": "西安A团-刘晨辉",
+      "name": "曹杰09",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 3
+    },
+    {
+      "name": "杨帆116",
+      "branch": "成都一部",
+      "team": "成都L团-李博",
       "count": 2
     },
     {
@@ -205,15 +228,15 @@
       "count": 2
     },
     {
-      "name": "魏小霞01",
+      "name": "胡静24",
       "branch": "西安一部",
       "team": "西安A团-刘晨辉",
       "count": 2
     },
     {
-      "name": "杜屿06",
+      "name": "魏小霞01",
       "branch": "西安一部",
-      "team": "西安E团-杨锋",
+      "team": "西安A团-刘晨辉",
       "count": 2
     },
     {
@@ -223,9 +246,33 @@
       "count": 2
     },
     {
+      "name": "杜屿06",
+      "branch": "西安一部",
+      "team": "西安E团-杨锋",
+      "count": 2
+    },
+    {
       "name": "王笑阳05",
       "branch": "西安一部",
       "team": "西安E团-杨锋",
+      "count": 2
+    },
+    {
+      "name": "张晨阳06",
+      "branch": "西安一部",
+      "team": "西安L团-张乐成",
+      "count": 2
+    },
+    {
+      "name": "彭洁11",
+      "branch": "西安一部",
+      "team": "西安L团-张乐成",
+      "count": 2
+    },
+    {
+      "name": "梅艳芳",
+      "branch": "西安一部",
+      "team": "西安L团-张乐成",
       "count": 2
     },
     {
@@ -241,51 +288,33 @@
       "count": 2
     },
     {
-      "name": "梅艳芳",
-      "branch": "西安一部",
-      "team": "西安L团-张乐成",
+      "name": "刘金玲01",
+      "branch": "西安三部",
+      "team": "西安T团-王金辉",
       "count": 2
     },
     {
-      "name": "彭洁11",
-      "branch": "西安一部",
-      "team": "西安L团-张乐成",
+      "name": "王劝01",
+      "branch": "西安二部",
+      "team": "西安M团-周盟",
       "count": 2
     },
     {
-      "name": "张晨阳06",
-      "branch": "西安一部",
-      "team": "西安L团-张乐成",
+      "name": "杨嘉琪10",
+      "branch": "西安二部",
+      "team": "西安T团-宋博涛",
+      "count": 2
+    },
+    {
+      "name": "李映东02",
+      "branch": "西安二部",
+      "team": "西安Y团-秦浩南",
       "count": 2
     },
     {
       "name": "黄春凯",
       "branch": "郑州二部",
       "team": "郑州直辖团",
-      "count": 2
-    },
-    {
-      "name": "龙燕芬",
-      "branch": "重庆二部",
-      "team": "重庆D团-帅洁城",
-      "count": 2
-    },
-    {
-      "name": "李家韦28",
-      "branch": "重庆三部",
-      "team": "重庆H团-李航",
-      "count": 2
-    },
-    {
-      "name": "韩佳宏",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
-      "count": 2
-    },
-    {
-      "name": "蒋豪14",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
       "count": 2
     },
     {
@@ -301,10 +330,34 @@
       "count": 2
     },
     {
-      "name": "金思慧",
-      "branch": "成都一部",
-      "team": "成都E团-苏琼瑶",
-      "count": 1
+      "name": "蒋豪14",
+      "branch": "重庆一部",
+      "team": "重庆Y团-方阳威",
+      "count": 2
+    },
+    {
+      "name": "韩佳宏",
+      "branch": "重庆一部",
+      "team": "重庆Y团-方阳威",
+      "count": 2
+    },
+    {
+      "name": "李家韦28",
+      "branch": "重庆三部",
+      "team": "重庆H团-李航",
+      "count": 2
+    },
+    {
+      "name": "田玖虹",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 2
+    },
+    {
+      "name": "龙燕芬",
+      "branch": "重庆二部",
+      "team": "重庆D团-帅洁城",
+      "count": 2
     },
     {
       "name": "康钦雍",
@@ -313,9 +366,9 @@
       "count": 1
     },
     {
-      "name": "高鹏焱",
+      "name": "金思慧",
       "branch": "成都一部",
-      "team": "成都L团-李博",
+      "team": "成都E团-苏琼瑶",
       "count": 1
     },
     {
@@ -331,13 +384,7 @@
       "count": 1
     },
     {
-      "name": "石山毅",
-      "branch": "成都一部",
-      "team": "成都L团-李博",
-      "count": 1
-    },
-    {
-      "name": "杨帆116",
+      "name": "周江01",
       "branch": "成都一部",
       "team": "成都L团-李博",
       "count": 1
@@ -349,7 +396,13 @@
       "count": 1
     },
     {
-      "name": "周江01",
+      "name": "石山毅",
+      "branch": "成都一部",
+      "team": "成都L团-李博",
+      "count": 1
+    },
+    {
+      "name": "高鹏焱",
       "branch": "成都一部",
       "team": "成都L团-李博",
       "count": 1
@@ -367,85 +420,7 @@
       "count": 1
     },
     {
-      "name": "张月媛01",
-      "branch": "西安三部",
-      "team": "西安B团-包乃梅",
-      "count": 1
-    },
-    {
-      "name": "赵天成",
-      "branch": "西安三部",
-      "team": "西安B团-包乃梅",
-      "count": 1
-    },
-    {
-      "name": "陈一唯01",
-      "branch": "西安三部",
-      "team": "西安T团-王金辉",
-      "count": 1
-    },
-    {
-      "name": "陈雨含10",
-      "branch": "西安三部",
-      "team": "西安T团-王金辉",
-      "count": 1
-    },
-    {
-      "name": "封梦鸽",
-      "branch": "西安三部",
-      "team": "西安T团-王金辉",
-      "count": 1
-    },
-    {
-      "name": "郭思涵",
-      "branch": "西安三部",
-      "team": "西安T团-王金辉",
-      "count": 1
-    },
-    {
-      "name": "黄帅04",
-      "branch": "西安三部",
-      "team": "西安T团-王金辉",
-      "count": 1
-    },
-    {
-      "name": "李博34",
-      "branch": "西安三部",
-      "team": "西安T团-王金辉",
-      "count": 1
-    },
-    {
-      "name": "屈颖洁",
-      "branch": "西安三部",
-      "team": "西安T团-王金辉",
-      "count": 1
-    },
-    {
-      "name": "王杰128",
-      "branch": "西安三部",
-      "team": "西安T团-王金辉",
-      "count": 1
-    },
-    {
       "name": "成晓林02",
-      "branch": "西安一部",
-      "team": "西安A团-刘晨辉",
-      "count": 1
-    },
-    {
-      "name": "郭婉莹",
-      "branch": "西安一部",
-      "team": "西安A团-刘晨辉",
-      "count": 1
-    },
-    {
-      "name": "来玉欣",
-      "branch": "西安一部",
-      "team": "西安A团-刘晨辉",
-      "count": 1
-    },
-    {
-      "name": "李敏贤",
       "branch": "西安一部",
       "team": "西安A团-刘晨辉",
       "count": 1
@@ -457,13 +432,25 @@
       "count": 1
     },
     {
-      "name": "申佳豪",
+      "name": "李敏贤",
+      "branch": "西安一部",
+      "team": "西安A团-刘晨辉",
+      "count": 1
+    },
+    {
+      "name": "来玉欣",
       "branch": "西安一部",
       "team": "西安A团-刘晨辉",
       "count": 1
     },
     {
       "name": "王嘉豪13",
+      "branch": "西安一部",
+      "team": "西安A团-刘晨辉",
+      "count": 1
+    },
+    {
+      "name": "申佳豪",
       "branch": "西安一部",
       "team": "西安A团-刘晨辉",
       "count": 1
@@ -481,6 +468,18 @@
       "count": 1
     },
     {
+      "name": "郭婉莹",
+      "branch": "西安一部",
+      "team": "西安A团-刘晨辉",
+      "count": 1
+    },
+    {
+      "name": "寇佳佳",
+      "branch": "西安一部",
+      "team": "西安E团-杨锋",
+      "count": 1
+    },
+    {
       "name": "曹艺菲03",
       "branch": "西安一部",
       "team": "西安E团-杨锋",
@@ -488,18 +487,6 @@
     },
     {
       "name": "柴彦强",
-      "branch": "西安一部",
-      "team": "西安E团-杨锋",
-      "count": 1
-    },
-    {
-      "name": "陈琪37",
-      "branch": "西安一部",
-      "team": "西安E团-杨锋",
-      "count": 1
-    },
-    {
-      "name": "寇佳佳",
       "branch": "西安一部",
       "team": "西安E团-杨锋",
       "count": 1
@@ -517,19 +504,19 @@
       "count": 1
     },
     {
-      "name": "白雪17",
+      "name": "陈琪37",
+      "branch": "西安一部",
+      "team": "西安E团-杨锋",
+      "count": 1
+    },
+    {
+      "name": "伍泽荣",
       "branch": "西安一部",
       "team": "西安L团-张乐成",
       "count": 1
     },
     {
-      "name": "陈丽鑫03",
-      "branch": "西安一部",
-      "team": "西安L团-张乐成",
-      "count": 1
-    },
-    {
-      "name": "莫石月",
+      "name": "张佳辉16",
       "branch": "西安一部",
       "team": "西安L团-张乐成",
       "count": 1
@@ -541,9 +528,153 @@
       "count": 1
     },
     {
-      "name": "伍泽荣",
+      "name": "白雪17",
       "branch": "西安一部",
       "team": "西安L团-张乐成",
+      "count": 1
+    },
+    {
+      "name": "莫石月",
+      "branch": "西安一部",
+      "team": "西安L团-张乐成",
+      "count": 1
+    },
+    {
+      "name": "郭鑫鑫01",
+      "branch": "西安一部",
+      "team": "西安L团-张乐成",
+      "count": 1
+    },
+    {
+      "name": "陈丽鑫03",
+      "branch": "西安一部",
+      "team": "西安L团-张乐成",
+      "count": 1
+    },
+    {
+      "name": "张月媛01",
+      "branch": "西安三部",
+      "team": "西安B团-包乃梅",
+      "count": 1
+    },
+    {
+      "name": "赵天成",
+      "branch": "西安三部",
+      "team": "西安B团-包乃梅",
+      "count": 1
+    },
+    {
+      "name": "封梦鸽",
+      "branch": "西安三部",
+      "team": "西安T团-王金辉",
+      "count": 1
+    },
+    {
+      "name": "屈颖洁",
+      "branch": "西安三部",
+      "team": "西安T团-王金辉",
+      "count": 1
+    },
+    {
+      "name": "李博34",
+      "branch": "西安三部",
+      "team": "西安T团-王金辉",
+      "count": 1
+    },
+    {
+      "name": "王一飞17",
+      "branch": "西安三部",
+      "team": "西安T团-王金辉",
+      "count": 1
+    },
+    {
+      "name": "王杰128",
+      "branch": "西安三部",
+      "team": "西安T团-王金辉",
+      "count": 1
+    },
+    {
+      "name": "郭思涵",
+      "branch": "西安三部",
+      "team": "西安T团-王金辉",
+      "count": 1
+    },
+    {
+      "name": "陈一唯01",
+      "branch": "西安三部",
+      "team": "西安T团-王金辉",
+      "count": 1
+    },
+    {
+      "name": "陈雨含10",
+      "branch": "西安三部",
+      "team": "西安T团-王金辉",
+      "count": 1
+    },
+    {
+      "name": "黄帅04",
+      "branch": "西安三部",
+      "team": "西安T团-王金辉",
+      "count": 1
+    },
+    {
+      "name": "曹美玲",
+      "branch": "西安二部",
+      "team": "西安L团-李雨璐",
+      "count": 1
+    },
+    {
+      "name": "孔丽凡",
+      "branch": "西安二部",
+      "team": "西安M团-周盟",
+      "count": 1
+    },
+    {
+      "name": "雪叶",
+      "branch": "西安二部",
+      "team": "西安M团-周盟",
+      "count": 1
+    },
+    {
+      "name": "乐高山",
+      "branch": "西安二部",
+      "team": "西安T团-宋博涛",
+      "count": 1
+    },
+    {
+      "name": "周杨轶智01",
+      "branch": "西安二部",
+      "team": "西安T团-宋博涛",
+      "count": 1
+    },
+    {
+      "name": "陈沛然",
+      "branch": "西安二部",
+      "team": "西安T团-宋博涛",
+      "count": 1
+    },
+    {
+      "name": "何佳伟07",
+      "branch": "西安二部",
+      "team": "西安Y团-秦浩南",
+      "count": 1
+    },
+    {
+      "name": "孙思敏01",
+      "branch": "西安二部",
+      "team": "西安Y团-秦浩南",
+      "count": 1
+    },
+    {
+      "name": "李妍114",
+      "branch": "西安二部",
+      "team": "西安Y团-秦浩南",
+      "count": 1
+    },
+    {
+      "name": "董德银01",
+      "branch": "西安二部",
+      "team": "西安Y团-秦浩南",
       "count": 1
     },
     {
@@ -553,25 +684,7 @@
       "count": 1
     },
     {
-      "name": "郭佳乐02",
-      "branch": "郑州二部",
-      "team": "郑州直辖团",
-      "count": 1
-    },
-    {
-      "name": "郭晓坤",
-      "branch": "郑州二部",
-      "team": "郑州直辖团",
-      "count": 1
-    },
-    {
-      "name": "郝中原",
-      "branch": "郑州二部",
-      "team": "郑州直辖团",
-      "count": 1
-    },
-    {
-      "name": "李佑斌",
+      "name": "宋鉴楳01",
       "branch": "郑州二部",
       "team": "郑州直辖团",
       "count": 1
@@ -589,7 +702,25 @@
       "count": 1
     },
     {
-      "name": "宋鉴楳01",
+      "name": "李佑斌",
+      "branch": "郑州二部",
+      "team": "郑州直辖团",
+      "count": 1
+    },
+    {
+      "name": "郝中原",
+      "branch": "郑州二部",
+      "team": "郑州直辖团",
+      "count": 1
+    },
+    {
+      "name": "郭佳乐02",
+      "branch": "郑州二部",
+      "team": "郑州直辖团",
+      "count": 1
+    },
+    {
+      "name": "郭晓坤",
       "branch": "郑州二部",
       "team": "郑州直辖团",
       "count": 1
@@ -601,121 +732,13 @@
       "count": 1
     },
     {
-      "name": "黄鑫32",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 1
-    },
-    {
-      "name": "李聪20",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 1
-    },
-    {
-      "name": "田玖虹",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 1
-    },
-    {
-      "name": "袁红静01",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 1
-    },
-    {
-      "name": "张彭彩",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 1
-    },
-    {
-      "name": "章灿18",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 1
-    },
-    {
-      "name": "郑美琪",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 1
-    },
-    {
-      "name": "李静113",
-      "branch": "重庆二部",
-      "team": "重庆D团-帅洁城",
-      "count": 1
-    },
-    {
-      "name": "刘骞49",
-      "branch": "重庆二部",
-      "team": "重庆D团-帅洁城",
-      "count": 1
-    },
-    {
-      "name": "刘溢47",
-      "branch": "重庆二部",
-      "team": "重庆D团-帅洁城",
-      "count": 1
-    },
-    {
-      "name": "陶剑01",
-      "branch": "重庆二部",
-      "team": "重庆D团-帅洁城",
-      "count": 1
-    },
-    {
-      "name": "杨利38",
-      "branch": "重庆二部",
-      "team": "重庆D团-帅洁城",
-      "count": 1
-    },
-    {
-      "name": "周刚05",
-      "branch": "重庆二部",
-      "team": "重庆D团-帅洁城",
-      "count": 1
-    },
-    {
-      "name": "汤敬扬",
-      "branch": "重庆二部",
-      "team": "重庆K团-纵晨",
-      "count": 1
-    },
-    {
-      "name": "张伦辉",
-      "branch": "重庆二部",
-      "team": "重庆L团-李太萍",
-      "count": 1
-    },
-    {
-      "name": "李飞扬03",
-      "branch": "重庆三部",
-      "team": "重庆H团-李航",
-      "count": 1
-    },
-    {
-      "name": "孙淏冉10",
-      "branch": "重庆三部",
-      "team": "重庆H团-李航",
-      "count": 1
-    },
-    {
-      "name": "王前顺",
-      "branch": "重庆三部",
-      "team": "重庆H团-李航",
-      "count": 1
-    },
-    {
-      "name": "严文姬",
-      "branch": "重庆三部",
-      "team": "重庆H团-李航",
-      "count": 1
-    },
-    {
       "name": "聂慧竹",
+      "branch": "重庆一部",
+      "team": "重庆A团-廖艺璇",
+      "count": 1
+    },
+    {
+      "name": "苟建雄",
       "branch": "重庆一部",
       "team": "重庆A团-廖艺璇",
       "count": 1
@@ -727,13 +750,25 @@
       "count": 1
     },
     {
-      "name": "苟建雄",
+      "name": "冉启浪",
       "branch": "重庆一部",
       "team": "重庆Y团-方阳威",
       "count": 1
     },
     {
-      "name": "胡春颖",
+      "name": "吕武强",
+      "branch": "重庆一部",
+      "team": "重庆Y团-方阳威",
+      "count": 1
+    },
+    {
+      "name": "周琳娸",
+      "branch": "重庆一部",
+      "team": "重庆Y团-方阳威",
+      "count": 1
+    },
+    {
+      "name": "屈琪武",
       "branch": "重庆一部",
       "team": "重庆Y团-方阳威",
       "count": 1
@@ -751,31 +786,13 @@
       "count": 1
     },
     {
-      "name": "吕武强",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
-      "count": 1
-    },
-    {
-      "name": "屈琪武",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
-      "count": 1
-    },
-    {
-      "name": "冉启浪",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
-      "count": 1
-    },
-    {
       "name": "申鑫涛",
       "branch": "重庆一部",
       "team": "重庆Y团-方阳威",
       "count": 1
     },
     {
-      "name": "谭术勇",
+      "name": "胡春颖",
       "branch": "重庆一部",
       "team": "重庆Y团-方阳威",
       "count": 1
@@ -787,15 +804,129 @@
       "count": 1
     },
     {
+      "name": "谭术勇",
+      "branch": "重庆一部",
+      "team": "重庆Y团-方阳威",
+      "count": 1
+    },
+    {
       "name": "钟宏举",
       "branch": "重庆一部",
       "team": "重庆Y团-方阳威",
       "count": 1
     },
     {
-      "name": "周琳娸",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
+      "name": "严文姬",
+      "branch": "重庆三部",
+      "team": "重庆H团-李航",
+      "count": 1
+    },
+    {
+      "name": "孙淏冉10",
+      "branch": "重庆三部",
+      "team": "重庆H团-李航",
+      "count": 1
+    },
+    {
+      "name": "李飞扬03",
+      "branch": "重庆三部",
+      "team": "重庆H团-李航",
+      "count": 1
+    },
+    {
+      "name": "王前顺",
+      "branch": "重庆三部",
+      "team": "重庆H团-李航",
+      "count": 1
+    },
+    {
+      "name": "周普琼01",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 1
+    },
+    {
+      "name": "张彭彩",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 1
+    },
+    {
+      "name": "李聪20",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 1
+    },
+    {
+      "name": "章灿18",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 1
+    },
+    {
+      "name": "袁红静01",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 1
+    },
+    {
+      "name": "郑美琪",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 1
+    },
+    {
+      "name": "黄鑫32",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 1
+    },
+    {
+      "name": "刘溢47",
+      "branch": "重庆二部",
+      "team": "重庆D团-帅洁城",
+      "count": 1
+    },
+    {
+      "name": "刘骞49",
+      "branch": "重庆二部",
+      "team": "重庆D团-帅洁城",
+      "count": 1
+    },
+    {
+      "name": "周刚05",
+      "branch": "重庆二部",
+      "team": "重庆D团-帅洁城",
+      "count": 1
+    },
+    {
+      "name": "李静113",
+      "branch": "重庆二部",
+      "team": "重庆D团-帅洁城",
+      "count": 1
+    },
+    {
+      "name": "杨利38",
+      "branch": "重庆二部",
+      "team": "重庆D团-帅洁城",
+      "count": 1
+    },
+    {
+      "name": "陶剑01",
+      "branch": "重庆二部",
+      "team": "重庆D团-帅洁城",
+      "count": 1
+    },
+    {
+      "name": "汤敬扬",
+      "branch": "重庆二部",
+      "team": "重庆K团-纵晨",
+      "count": 1
+    },
+    {
+      "name": "张伦辉",
+      "branch": "重庆二部",
+      "team": "重庆L团-李太萍",
       "count": 1
     }
   ],
@@ -807,21 +938,9 @@
       "count": 3
     },
     {
-      "name": "曹杰09",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 3
-    },
-    {
-      "name": "冉雪萍02",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 3
-    },
-    {
-      "name": "庞川森",
-      "branch": "重庆三部",
-      "team": "重庆H团-李航",
+      "name": "周泓豆",
+      "branch": "重庆一部",
+      "team": "重庆Y团-方阳威",
       "count": 3
     },
     {
@@ -831,130 +950,22 @@
       "count": 3
     },
     {
-      "name": "周泓豆",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
+      "name": "庞川森",
+      "branch": "重庆三部",
+      "team": "重庆H团-李航",
       "count": 3
     },
     {
-      "name": "刘金玲01",
-      "branch": "西安三部",
-      "team": "西安T团-王金辉",
-      "count": 2
-    },
-    {
-      "name": "胡静24",
-      "branch": "西安一部",
-      "team": "西安A团-刘晨辉",
-      "count": 2
-    },
-    {
-      "name": "刘东18",
-      "branch": "西安一部",
-      "team": "西安A团-刘晨辉",
-      "count": 2
-    },
-    {
-      "name": "孟宪梓",
-      "branch": "西安一部",
-      "team": "西安A团-刘晨辉",
-      "count": 2
-    },
-    {
-      "name": "魏小霞01",
-      "branch": "西安一部",
-      "team": "西安A团-刘晨辉",
-      "count": 2
-    },
-    {
-      "name": "杜屿06",
-      "branch": "西安一部",
-      "team": "西安E团-杨锋",
-      "count": 2
-    },
-    {
-      "name": "寇媛媛",
-      "branch": "西安一部",
-      "team": "西安E团-杨锋",
-      "count": 2
-    },
-    {
-      "name": "王笑阳05",
-      "branch": "西安一部",
-      "team": "西安E团-杨锋",
-      "count": 2
-    },
-    {
-      "name": "路梦婷",
-      "branch": "西安一部",
-      "team": "西安L团-张乐成",
-      "count": 2
-    },
-    {
-      "name": "马菁菁05",
-      "branch": "西安一部",
-      "team": "西安L团-张乐成",
-      "count": 2
-    },
-    {
-      "name": "梅艳芳",
-      "branch": "西安一部",
-      "team": "西安L团-张乐成",
-      "count": 2
-    },
-    {
-      "name": "彭洁11",
-      "branch": "西安一部",
-      "team": "西安L团-张乐成",
-      "count": 2
-    },
-    {
-      "name": "张晨阳06",
-      "branch": "西安一部",
-      "team": "西安L团-张乐成",
-      "count": 2
-    },
-    {
-      "name": "黄春凯",
-      "branch": "郑州二部",
-      "team": "郑州直辖团",
-      "count": 2
-    },
-    {
-      "name": "龙燕芬",
+      "name": "冉雪萍02",
       "branch": "重庆二部",
-      "team": "重庆D团-帅洁城",
-      "count": 2
+      "team": "重庆C团-陈琴",
+      "count": 3
     },
     {
-      "name": "李家韦28",
-      "branch": "重庆三部",
-      "team": "重庆H团-李航",
-      "count": 2
-    },
-    {
-      "name": "韩佳宏",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
-      "count": 2
-    },
-    {
-      "name": "蒋豪14",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
-      "count": 2
-    },
-    {
-      "name": "况开林",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
-      "count": 2
-    },
-    {
-      "name": "罗月凤",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
-      "count": 2
+      "name": "曹杰09",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 3
     }
   ],
   "topStar": {
@@ -966,8 +977,8 @@
   "championGroup": {
     "name": "重庆Y团-方阳威",
     "branch": "重庆一部",
-    "people": 17,
-    "orders": 23
+    "people": 16,
+    "orders": 22
   },
   "topStars": [
     {
@@ -977,21 +988,9 @@
       "count": 3
     },
     {
-      "name": "曹杰09",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 3
-    },
-    {
-      "name": "冉雪萍02",
-      "branch": "重庆二部",
-      "team": "重庆C团-陈琴",
-      "count": 3
-    },
-    {
-      "name": "庞川森",
-      "branch": "重庆三部",
-      "team": "重庆H团-李航",
+      "name": "周泓豆",
+      "branch": "重庆一部",
+      "team": "重庆Y团-方阳威",
       "count": 3
     },
     {
@@ -1001,9 +1000,21 @@
       "count": 3
     },
     {
-      "name": "周泓豆",
-      "branch": "重庆一部",
-      "team": "重庆Y团-方阳威",
+      "name": "庞川森",
+      "branch": "重庆三部",
+      "team": "重庆H团-李航",
+      "count": 3
+    },
+    {
+      "name": "冉雪萍02",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
+      "count": 3
+    },
+    {
+      "name": "曹杰09",
+      "branch": "重庆二部",
+      "team": "重庆C团-陈琴",
       "count": 3
     }
   ]
