@@ -421,14 +421,16 @@
       const topStars = data.topStars || [];
       const cpContainer = document.getElementById('championPersonContainer');
       if (topStars.length > 0 && cpContainer) {
-        cpContainer.innerHTML = topStars.map((star, idx) => `
-          <div class="star-item" style="display:flex;align-items:center;gap:8px;padding:4px 0;">
-            <div class="hero-avatar" style="font-size:14px;width:32px;height:32px;">${idx+1}</div>
-            <div style="flex:1;">
-              <div style="font-size:14px;font-weight:600;">${star.name}</div>
-            </div>
-          </div>
-        `).join('');
+        const starsWrap = document.createElement('div');
+        starsWrap.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:8px 0;';
+        topStars.forEach(star => {
+          const chip = document.createElement('span');
+          chip.style.cssText = 'padding:4px 12px;border-radius:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(168,85,247,0.2);color:#f8fafc;font-size:14px;font-weight:600;';
+          chip.textContent = star.name;
+          starsWrap.appendChild(chip);
+        });
+        cpContainer.innerHTML = '';
+        cpContainer.appendChild(starsWrap);
       }
 
       // 保留原有兼容逻辑（如果没有topStars则显示原来的单个人）
